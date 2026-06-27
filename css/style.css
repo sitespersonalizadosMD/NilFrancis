@@ -747,17 +747,15 @@ COLEÇÃO
 
 .categorias a{
 
-    display:block;
+    display:flex;
 
-    border-radius:14px;
+    flex-direction:column;
 
     overflow:hidden;
 
+    border-radius:18px;
+
     background:#fff;
-
-    box-shadow:var(--sombra);
-
-    transition:.35s;
 
 }
 
@@ -771,11 +769,11 @@ COLEÇÃO
 
     width:100%;
 
-    aspect-ratio:4/5;
+    height:auto;
 
-    object-fit:cover;
+    object-fit:contain;
 
-    border-radius:15px 15px 0 0;
+    display:block;
 
 }
 
