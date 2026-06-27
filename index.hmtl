@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nil Francis | Since 1990</title>
+
+    <meta name="description"
+        content="Há mais de 30 anos elevando a autoestima do brasileiro. Moda casual masculina com qualidade, conforto e estilo.">
+
+    <meta name="keywords"
+        content="Moda Masculina, Oversized, Camisetas, Bermudas, Shorts, Nil Francis">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header id="header">
+
+        <div class="container">
+
+            <div class="logo">
+
+                <img src="img/logo.png" alt="Nil Francis">
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#inicio">Início</a></li>
+
+                    <li><a href="#colecao">Coleção</a></li>
+
+                    <li><a href="#sobre">Sobre</a></li>
+
+                    <li><a href="#contato">Contato</a></li>
+
+                </ul>
+
+            </nav>
+
+            <a href="https://wa.me/5521997754893" class="btn-header">
+
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+   <section id="inicio" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-subtitle">Since 1990</span>
+
+        <h1>Nil Francis</h1>
+
+        <p>
+            Há mais de 30 anos elevando a autoestima do brasileiro.
+            Vestir você bem é o nosso compromisso.
+        </p>
+
+        <a href="#colecao" class="btn-principal">
+            Conheça a Coleção
+        </a>
+
+    </div>
+
+    <div class="scroll-down">
+        <span></span>
+    </div>
+
+</section>
+
+    <!-- ================= SOBRE ================= -->
+
+    <section id="sobre" class="sobre">
+
+        <div class="container">
+
+            <div class="sobre-img">
+
+                <img src="img/sobre.jpg" alt="Nil Francis">
+
+            </div>
+
+            <div class="sobre-texto">
+
+                <span>DESDE 1990</span>
+
+                <h2>
+
+                    Mais de três décadas vestindo quem valoriza qualidade.
+
+                </h2>
+
+                <p>
+
+                    Somos a Nil Francis.
+
+                    Há mais de 30 anos elevando a autoestima do brasileiro.
+
+                    Te vestir bem é nosso compromisso.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COLEÇÃO ================= -->
+
+    <section id="colecao">
+
+        <div class="titulo">
+
+            <span>COLEÇÃO</span>
+
+            <h2>Nossa Coleção</h2>
+
+        </div>
+
+        <div class="categorias">
+
+            <a href="#oversized">Oversized</a>
+
+            <a href="#tradicional">Tradicional</a>
+
+            <a href="#short">Shorts</a>
+
+            <a href="#bermuda">Bermudas</a>
+
+            <a href="#regata">Regatas</a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PRODUTOS ================= -->
+
+    <section class="produtos">
+
+        <!-- Oversized -->
+
+        <div id="oversized" class="produto">
+
+            <img src="img/oversized.jpg">
+
+            <div class="info">
+
+                <h3>Oversized Lisa</h3>
+
+                <p>Malhão Premium</p>
+
+                <span class="preco">
+
+                    R$ 50,00
+
+                </span>
+
+                <div class="tamanhos">
+
+                    P • M • G • GG
+
+                </div>
+
+                <a href="#">
+
+                    Comprar pelo WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Tradicional -->
+
+        <div id="tradicional" class="produto">
+
+        </div>
+
+        <!-- Short -->
+
+        <div id="short" class="produto">
+
+        </div>
+
+        <!-- Bermuda -->
+
+        <div id="bermuda" class="produto">
+
+        </div>
+
+        <!-- Regata -->
+
+        <div id="regata" class="produto">
+
+        </div>
+
+    </section>
+
+    <!-- ================= DIFERENCIAIS ================= -->
+
+    <section class="diferenciais">
+
+        <div>
+
+            <h3>30+</h3>
+
+            <span>Anos de tradição</span>
+
+        </div>
+
+        <div>
+
+            <h3>100%</h3>
+
+            <span>Qualidade</span>
+
+        </div>
+
+        <div>
+
+            <h3>PIX</h3>
+
+            <span>Cartão e Boleto</span>
+
+        </div>
+
+        <div>
+
+            <h3>P • GG</h3>
+
+            <span>Tamanhos disponíveis</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COMO COMPRAR ================= -->
+
+    <section class="comprar">
+
+        <div class="titulo">
+
+            <span>COMO FUNCIONA</span>
+
+            <h2>Comprar é simples</h2>
+
+        </div>
+
+        <div class="passos">
+
+            <div>
+
+                <h3>01</h3>
+
+                <p>Escolha seu produto.</p>
+
+            </div>
+
+            <div>
+
+                <h3>02</h3>
+
+                <p>Entre em contato pelo WhatsApp.</p>
+
+            </div>
+
+            <div>
+
+                <h3>03</h3>
+
+                <p>Receba sua compra com segurança.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+
+    <section id="contato">
+
+        <div class="titulo">
+
+            <span>CONTATO</span>
+
+            <h2>Fale com a Nil Francis</h2>
+
+        </div>
+
+        <p>
+
+            Segunda a sábado
+
+            <br>
+
+            08:00 às 18:00
+
+        </p>
+
+        <a href="https://wa.me/5521997754893">
+
+            WhatsApp
+
+        </a>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <img src="img/logo-branca.png">
+
+        <p>
+
+            © 2026 Nil Francis.
+
+            Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
