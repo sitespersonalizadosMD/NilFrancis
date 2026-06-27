@@ -239,7 +239,13 @@ nav a{
 
 .categorias img{
 
-    height:280px;
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
 
 }
 
