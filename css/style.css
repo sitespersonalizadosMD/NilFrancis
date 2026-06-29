@@ -1525,3 +1525,32 @@ SCROLLBAR
     margin-bottom:25px;
 
 }
+.video-titulo{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    color:#2b2b2b;
+
+    position:relative;
+
+}
+
+.video-titulo::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:2px;
+
+    background:#66705A;
+
+    margin:15px auto 0;
+
+}
