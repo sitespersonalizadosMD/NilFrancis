@@ -1506,3 +1506,22 @@ SCROLLBAR
     box-shadow:0 20px 50px rgba(0,0,0,.15);
 
 }
+.sobre-image h3{
+
+    font-size:34px;
+
+    color:var(--texto);
+
+    margin-bottom:12px;
+
+}
+
+.sobre-image p{
+
+    color:var(--cinza);
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
