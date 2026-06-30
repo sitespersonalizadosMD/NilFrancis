@@ -177,6 +177,17 @@ nav a{
 
 .header-buttons{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.btn-instagram,
+.btn-whatsapp{
+
     display:none;
 
 }
