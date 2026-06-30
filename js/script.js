@@ -298,3 +298,39 @@ window.addEventListener("scroll",()=>{
     });
 
 });
+
+/*=========================================
+CARRINHO
+=========================================*/
+
+const carrinho = document.getElementById("carrinho");
+
+const abrirCarrinho = document.getElementById("abrirCarrinho");
+
+const fecharCarrinho = document.getElementById("fecharCarrinho");
+
+const overlayCarrinho = document.getElementById("overlayCarrinho");
+
+abrirCarrinho.addEventListener("click", () => {
+
+    carrinho.classList.add("aberto");
+
+    overlayCarrinho.classList.add("ativo");
+
+});
+
+fecharCarrinho.addEventListener("click", () => {
+
+    carrinho.classList.remove("aberto");
+
+    overlayCarrinho.classList.remove("ativo");
+
+});
+
+overlayCarrinho.addEventListener("click", () => {
+
+    carrinho.classList.remove("aberto");
+
+    overlayCarrinho.classList.remove("ativo");
+
+});
