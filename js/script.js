@@ -356,3 +356,73 @@ cores.forEach(cor=>{
     });
 
 });
+/*=========================================
+OVERSIZED
+=========================================*/
+
+// FOTO
+
+const imagemOversized = document.getElementById("imagem-oversized");
+const selectCor = document.getElementById("corOversized");
+
+if (imagemOversized && selectCor) {
+
+    selectCor.addEventListener("change", () => {
+
+        imagemOversized.src = selectCor.value;
+
+    });
+
+}
+
+
+// TAMANHOS
+
+const tamanhos = document.querySelectorAll(".produto-tamanhos button");
+
+tamanhos.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        tamanhos.forEach(t => t.classList.remove("ativo"));
+
+        botao.classList.add("ativo");
+
+    });
+
+});
+
+
+// QUANTIDADE
+
+const menos = document.querySelector(".quantidade button:first-child");
+
+const mais = document.querySelector(".quantidade button:last-child");
+
+const quantidade = document.querySelector(".quantidade span");
+
+let qtd = 1;
+
+if (menos && mais && quantidade) {
+
+    mais.addEventListener("click", () => {
+
+        qtd++;
+
+        quantidade.innerText = qtd;
+
+    });
+
+    menos.addEventListener("click", () => {
+
+        if (qtd > 1) {
+
+            qtd--;
+
+            quantidade.innerText = qtd;
+
+        }
+
+    });
+
+}
