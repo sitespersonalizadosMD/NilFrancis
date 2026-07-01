@@ -426,3 +426,16 @@ if (menos && mais && quantidade) {
     });
 
 }
+
+const selectCor = document.getElementById("corOversized");
+const imagem = document.getElementById("imagemOversized");
+
+if(selectCor && imagem){
+
+    selectCor.addEventListener("change", function(){
+
+        imagem.src = this.value;
+
+    });
+
+}
