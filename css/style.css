@@ -1792,3 +1792,57 @@ VER PRODUTOS
     transform:translateY(-8px);
 
 }
+
+/*=========================================
+CORES DOS PRODUTOS
+=========================================*/
+
+.produto-cores{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:25px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.produto-cores strong{
+
+    margin-right:8px;
+
+}
+
+.cor{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    border:2px solid #ddd;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cor:hover{
+
+    transform:scale(1.15);
+
+}
+
+.cor.ativa{
+
+    border:3px solid #68745F;
+
+    transform:scale(1.15);
+
+}
