@@ -334,3 +334,25 @@ overlayCarrinho.addEventListener("click", () => {
     overlayCarrinho.classList.remove("ativo");
 
 });
+
+/*=========================================
+TROCAR COR DO OVERSIZED
+=========================================*/
+
+const imagemOversized = document.getElementById("imagem-oversized");
+
+const cores = document.querySelectorAll(".produto-cores .cor");
+
+cores.forEach(cor=>{
+
+    cor.addEventListener("click",()=>{
+
+        imagemOversized.src = cor.dataset.img;
+
+        cores.forEach(c=>c.classList.remove("ativa"));
+
+        cor.classList.add("ativa");
+
+    });
+
+});
