@@ -1993,3 +1993,12 @@ PRODUTO V2
     margin-top:10px;
 
 }
+.produto-tamanhos button.ativo{
+
+    background:#68745F;
+
+    color:#fff;
+
+    border-color:#68745F;
+
+}
