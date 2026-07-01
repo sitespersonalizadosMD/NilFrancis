@@ -1846,3 +1846,150 @@ CORES DOS PRODUTOS
     transform:scale(1.15);
 
 }
+/*=========================================
+PRODUTO V2
+=========================================*/
+
+.produto-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.produto-info label{
+
+    font-weight:600;
+
+    color:#555;
+
+    font-size:15px;
+
+    margin-bottom:-10px;
+
+}
+
+.produto-info select{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    background:#fff;
+
+}
+
+.produto-info select:focus{
+
+    border-color:#68745F;
+
+}
+
+.produto-tamanhos{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.produto-tamanhos button{
+
+    width:55px;
+
+    height:45px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.produto-tamanhos button:hover{
+
+    background:#68745F;
+
+    color:#fff;
+
+}
+
+.quantidade{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.quantidade button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#68745F;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quantidade button:hover{
+
+    opacity:.85;
+
+}
+
+.quantidade span{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    min-width:25px;
+
+    text-align:center;
+
+}
+
+.btn-comprar{
+
+    margin-top:10px;
+
+}
