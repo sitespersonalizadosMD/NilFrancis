@@ -266,6 +266,21 @@ nav a{
 
 }
 
+    .produto-imagem{
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.produto-imagem img{
+
+    width:70%;
+    max-width:280px;
+    margin:0 auto;
+
+}
+
 .produto-card.reverse .produto-imagem{
 
     order:1;
@@ -403,7 +418,14 @@ IPHONE SE / GALAXY A
 
 .produto-info h3{
 
-    font-size:38px;
+    font-size:30px;
+
+}
+
+.produto-imagem img{
+
+    width:65%;
+    max-width:220px;
 
 }
 
@@ -425,14 +447,4 @@ IPHONE SE / GALAXY A
 
 }
 
-.produto-imagem img{
 
-    width:80%;
-
-    max-width:320px;
-
-    display:block;
-
-    margin:0 auto;
-
-}
