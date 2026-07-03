@@ -415,6 +415,8 @@ if (imagemOversized && selectCor) {
 
     selectCor.addEventListener("change", function () {
 
+        console.log(this.value);
+
         imagemOversized.src = this.value;
 
     });
