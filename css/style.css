@@ -906,9 +906,9 @@ PRODUTOS
 }
 
 .produto-info h3{
-
-    font-size:56px;
-
+    font-size:34px;
+    line-height:1.2;
+    margin-bottom:15px;
 }
 
 .produto-info p{
