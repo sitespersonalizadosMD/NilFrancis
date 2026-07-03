@@ -335,10 +335,6 @@ overlayCarrinho.addEventListener("click", () => {
 
 });
 
-/*=========================================
-OVERSIZED
-=========================================*/
-
 // FOTO
 
 const imagemOversized = document.getElementById("imagem-oversized");
