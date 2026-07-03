@@ -863,24 +863,19 @@ PRODUTOS
 
 .produto-imagem{
 
-    overflow:hidden;
-
-    border-radius:15px;
-
-}
-
-.produto-imagem{
-
     display:flex;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+    border-radius:15px;
 
 }
 
 .produto-imagem img{
 
-    width:85%;
-    max-width:420px;
+    width:100%;
+    max-width:380px;
+    height:auto;
     transition:.6s;
 
 }
