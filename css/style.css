@@ -869,8 +869,18 @@ PRODUTOS
 
 }
 
+.produto-imagem{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
 .produto-imagem img{
 
+    width:85%;
+    max-width:420px;
     transition:.6s;
 
 }
