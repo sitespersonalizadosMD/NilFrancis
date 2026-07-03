@@ -336,27 +336,6 @@ overlayCarrinho.addEventListener("click", () => {
 });
 
 /*=========================================
-TROCAR COR DO OVERSIZED
-=========================================*/
-
-const imagemOversized = document.getElementById("imagem-oversized");
-
-const cores = document.querySelectorAll(".produto-cores .cor");
-
-cores.forEach(cor=>{
-
-    cor.addEventListener("click",()=>{
-
-        imagemOversized.src = cor.dataset.img;
-
-        cores.forEach(c=>c.classList.remove("ativa"));
-
-        cor.classList.add("ativa");
-
-    });
-
-});
-/*=========================================
 OVERSIZED
 =========================================*/
 
@@ -427,15 +406,68 @@ if (menos && mais && quantidade) {
 
 }
 
+/*=========================================
+OVERSIZED
+=========================================*/
+
+// FOTO
+
+const imagemOversized = document.getElementById("imagem-oversized");
 const selectCor = document.getElementById("corOversized");
-const imagem = document.getElementById("imagemOversized");
 
-if(selectCor && imagem){
+if (imagemOversized && selectCor) {
 
-    selectCor.addEventListener("change", function(){
+    selectCor.addEventListener("change", function () {
 
-        imagem.src = this.value;
+        imagemOversized.src = this.value;
 
     });
+
+}
+
+
+// TAMANHO
+
+document.querySelectorAll(".produto-tamanhos button").forEach(botao => {
+
+    botao.addEventListener("click", function () {
+
+        document.querySelectorAll(".produto-tamanhos button")
+            .forEach(b => b.classList.remove("ativo"));
+
+        this.classList.add("ativo");
+
+    });
+
+});
+
+
+// QUANTIDADE
+
+const menos = document.querySelector(".quantidade button:first-child");
+const mais = document.querySelector(".quantidade button:last-child");
+const quantidade = document.querySelector(".quantidade span");
+
+let qtd = 1;
+
+if (menos && mais && quantidade) {
+
+    mais.onclick = () => {
+
+        qtd++;
+        quantidade.innerText = qtd;
+
+    };
+
+    menos.onclick = () => {
+
+        if (qtd > 1) {
+
+            qtd--;
+            quantidade.innerText = qtd;
+
+        }
+
+    };
 
 }
