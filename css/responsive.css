@@ -424,3 +424,15 @@ IPHONE SE / GALAXY A
 }
 
 }
+
+.produto-imagem img{
+
+    width:80%;
+
+    max-width:320px;
+
+    display:block;
+
+    margin:0 auto;
+
+}
