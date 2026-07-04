@@ -437,6 +437,38 @@ if (menosTradicional && maisTradicional && qtdTradicional) {
 }
 
 /*=========================================
+SHORT SARJA - QUANTIDADE
+=========================================*/
+
+const qtdShort = document.querySelector("#shorts .quantidade span");
+const menosShort = document.querySelector("#shorts .quantidade button:first-child");
+const maisShort = document.querySelector("#shorts .quantidade button:last-child");
+
+let quantidadeShort = 1;
+
+if (menosShort && maisShort && qtdShort) {
+
+    maisShort.addEventListener("click", () => {
+
+        quantidadeShort++;
+        qtdShort.innerText = quantidadeShort;
+
+    });
+
+    menosShort.addEventListener("click", () => {
+
+        if (quantidadeShort > 1) {
+
+            quantidadeShort--;
+            qtdShort.innerText = quantidadeShort;
+
+        }
+
+    });
+
+}
+
+/*=========================================
 OVERSIZED
 =========================================*/
 
@@ -475,6 +507,24 @@ if (imagemTradicional && selectTradicional) {
     });
 
 }
+
+/*=========================================
+SHORT SARJA - TAMANHO
+=========================================*/
+
+const tamanhosShort = document.querySelectorAll("#shorts .produto-tamanhos button");
+
+tamanhosShort.forEach(botao => {
+
+    botao.addEventListener("click", function () {
+
+        tamanhosShort.forEach(t => t.classList.remove("ativo"));
+
+        this.classList.add("ativo");
+
+    });
+
+});
 
 /*=========================================
 SHORT SARJA
@@ -594,6 +644,67 @@ if (botaoComprarTradicional) {
 
         item.innerHTML = `
             <h4>Camiseta Tradicional Lisa</h4>
+
+            <p>Cor: ${cor}</p>
+
+            <p>Tamanho: ${tamanho}</p>
+
+            <p>Quantidade: ${quantidade}</p>
+
+            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
+        `;
+
+        listaCarrinho.appendChild(item);
+
+        totalItens += quantidade;
+        contadorCarrinho.innerText = totalItens;
+
+        total += preco * quantidade;
+        subtotal.innerText = "R$ " + total.toFixed(2);
+
+        this.innerHTML = "✔ Produto adicionado!";
+        this.style.background = "#2E7D32";
+        this.disabled = true;
+
+        setTimeout(() => {
+
+            this.innerHTML = "🛒 Adicionar ao Carrinho";
+            this.style.background = "";
+            this.disabled = false;
+
+        }, 2000);
+
+    });
+
+}
+/*=========================================
+SHORT SARJA - CARRINHO
+=========================================*/
+
+const botaoComprarShort = document.querySelector("#shorts .btn-comprar");
+
+if (botaoComprarShort) {
+
+    botaoComprarShort.addEventListener("click", function () {
+
+        const cor = document.getElementById("corShort").options[
+            document.getElementById("corShort").selectedIndex
+        ].text;
+
+        const tamanho = document.querySelector("#shorts .produto-tamanhos button.ativo")?.innerText || "-";
+
+        const quantidade = Number(document.querySelector("#shorts .quantidade span").innerText);
+
+        const preco = 60;
+
+        listaCarrinho.querySelector(".carrinho-vazio")?.remove();
+
+        const item = document.createElement("div");
+
+        item.classList.add("item-carrinho");
+
+        item.innerHTML = `
+            <h4>Short Sarja</h4>
 
             <p>Cor: ${cor}</p>
 
