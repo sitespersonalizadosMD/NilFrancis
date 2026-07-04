@@ -426,15 +426,17 @@ if (imagemTradicional && selectTradicional) {
 
 }
 
+/*=========================================
+TRADICIONAL - TAMANHO
+=========================================*/
 
-// TAMANHO
+const tamanhosTradicional = document.querySelectorAll("#tradicional .produto-tamanhos button");
 
-document.querySelectorAll(".produto-tamanhos button").forEach(botao => {
+tamanhosTradicional.forEach(botao => {
 
     botao.addEventListener("click", function () {
 
-        document.querySelectorAll(".produto-tamanhos button")
-            .forEach(b => b.classList.remove("ativo"));
+        tamanhosTradicional.forEach(t => t.classList.remove("ativo"));
 
         this.classList.add("ativo");
 
