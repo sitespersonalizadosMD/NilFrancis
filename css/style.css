@@ -2042,3 +2042,16 @@ ITEM DO CARRINHO
     margin-top:8px;
 
 }
+
+.btn-comprar{
+
+    transition: all .3s ease;
+
+}
+
+.btn-comprar:disabled{
+
+    cursor:default;
+    opacity:.95;
+
+}
