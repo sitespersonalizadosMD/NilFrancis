@@ -759,24 +759,7 @@ if (imagemBermuda && selectBermuda) {
     });
 
 }
-/*=========================================
-BERMUDA MALHÃO
-=========================================*/
 
-// FOTO
-
-const imagemBermuda = document.getElementById("imagem-bermuda");
-const selectBermuda = document.getElementById("corBermuda");
-
-if (imagemBermuda && selectBermuda) {
-
-    selectBermuda.addEventListener("change", function () {
-
-        imagemBermuda.src = this.value;
-
-    });
-
-}
 /*=========================================
 BERMUDA MALHÃO - TAMANHO
 =========================================*/
