@@ -903,22 +903,30 @@ PRODUTOS
 
 .produto-info .categoria{
 
+    display:block;
+
     color:var(--verde);
 
-    font-size:14px;
+    font-size:13px;
 
-    letter-spacing:3px;
+    letter-spacing:5px;
 
-    font-weight:600;
+    font-weight:700;
 
     text-transform:uppercase;
+
+    margin-bottom:8px;
 
 }
 
 .produto-info h3{
-    font-size:34px;
-    line-height:1.2;
-    margin-bottom:15px;
+
+    font-size:42px;
+
+    line-height:1.1;
+
+    margin:0 0 8px;
+
 }
 
 .produto-info p{
@@ -977,9 +985,13 @@ PRODUTOS
 
 .produto-preco h4{
 
-    font-size:52px;
+    font-size:46px;
 
     color:var(--verde);
+
+    line-height:1;
+
+    margin:0;
 
 }
 
