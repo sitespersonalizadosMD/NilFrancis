@@ -474,4 +474,22 @@ document.querySelector(".btn-comprar").addEventListener("click", () => {
 
     subtotal.innerText = "R$ " + total.toFixed(2);
 
+    const botao = document.querySelector(".btn-comprar");
+
+botao.innerHTML = "✔ Produto adicionado!";
+
+botao.style.background = "#2E7D32";
+
+botao.disabled = true;
+
+setTimeout(() => {
+
+    botao.innerHTML = "🛒 Adicionar ao Carrinho";
+
+    botao.style.background = "";
+
+    botao.disabled = false;
+
+}, 2000);
+
 });
