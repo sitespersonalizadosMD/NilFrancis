@@ -1879,12 +1879,13 @@ PRODUTO V2
 
 .produto-info select{
 
-    width:100%;
+    width:calc(100% - 20px);
+    max-width:100%;
+    margin:0 auto;
 
     padding:14px 18px;
 
     border:1px solid #ddd;
-
     border-radius:10px;
 
     font-size:15px;
