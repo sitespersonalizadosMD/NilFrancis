@@ -447,24 +447,6 @@ if (imagemTradicional && selectTradicional) {
 }
 
 /*=========================================
-TRADICIONAL - TAMANHO
-=========================================*/
-
-const tamanhosTradicional = document.querySelectorAll("#tradicional .produto-tamanhos button");
-
-tamanhosTradicional.forEach(botao => {
-
-    botao.addEventListener("click", function () {
-
-        tamanhosTradicional.forEach(t => t.classList.remove("ativo"));
-
-        this.classList.add("ativo");
-
-    });
-
-});
-
-/*=========================================
 ADICIONAR AO CARRINHO
 =========================================*/
 
