@@ -794,3 +794,39 @@ tamanhosBermuda.forEach(botao => {
     });
 
 });
+/*=========================================
+BERMUDA MALHÃO - QUANTIDADE
+=========================================*/
+
+const qtdBermuda = document.querySelector("#bermuda .quantidade span");
+
+const botoesQuantidadeBermuda = document.querySelectorAll("#bermuda .quantidade button");
+
+const menosBermuda = botoesQuantidadeBermuda[0];
+const maisBermuda = botoesQuantidadeBermuda[1];
+
+let quantidadeBermuda = 1;
+
+if (menosBermuda && maisBermuda && qtdBermuda) {
+
+    maisBermuda.addEventListener("click", () => {
+
+        quantidadeBermuda++;
+
+        qtdBermuda.innerText = quantidadeBermuda;
+
+    });
+
+    menosBermuda.addEventListener("click", () => {
+
+        if (quantidadeBermuda > 1) {
+
+            quantidadeBermuda--;
+
+            qtdBermuda.innerText = quantidadeBermuda;
+
+        }
+
+    });
+
+}
