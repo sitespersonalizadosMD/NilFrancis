@@ -429,7 +429,7 @@ ADICIONAR AO CARRINHO
 
 const listaCarrinho = document.getElementById("listaCarrinho");
 const contadorCarrinho = document.getElementById("contadorCarrinho");
-const subtotal = document.getElementById("subtotal");
+const subtotal = document.getElementById("totalCarrinho");
 
 let totalItens = 0;
 let total = 0;
