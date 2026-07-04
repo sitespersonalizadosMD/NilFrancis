@@ -335,17 +335,37 @@ overlayCarrinho.addEventListener("click", () => {
 
 });
 
-// TAMANHOS
+/*=========================================
+OVERSIZED - TAMANHO
+=========================================*/
 
-const tamanhos = document.querySelectorAll(".produto-tamanhos button");
+const tamanhosOversized = document.querySelectorAll("#oversized .produto-tamanhos button");
 
-tamanhos.forEach(botao => {
+tamanhosOversized.forEach(botao => {
 
-    botao.addEventListener("click", () => {
+    botao.addEventListener("click", function () {
 
-        tamanhos.forEach(t => t.classList.remove("ativo"));
+        tamanhosOversized.forEach(t => t.classList.remove("ativo"));
 
-        botao.classList.add("ativo");
+        this.classList.add("ativo");
+
+    });
+
+});
+
+/*=========================================
+TRADICIONAL - TAMANHO
+=========================================*/
+
+const tamanhosTradicional = document.querySelectorAll("#tradicional .produto-tamanhos button");
+
+tamanhosTradicional.forEach(botao => {
+
+    botao.addEventListener("click", function () {
+
+        tamanhosTradicional.forEach(t => t.classList.remove("ativo"));
+
+        this.classList.add("ativo");
 
     });
 
