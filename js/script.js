@@ -434,7 +434,9 @@ const subtotal = document.getElementById("totalCarrinho");
 let totalItens = 0;
 let total = 0;
 
-document.querySelector(".btn-comprar").addEventListener("click", () => {
+const botaoComprar = document.querySelector("#oversized .btn-comprar");
+
+botaoComprar.addEventListener("click", function () {
 
     const cor = document.getElementById("corOversized").options[
         document.getElementById("corOversized").selectedIndex
@@ -474,21 +476,19 @@ document.querySelector(".btn-comprar").addEventListener("click", () => {
 
     subtotal.innerText = "R$ " + total.toFixed(2);
 
-    const botao = document.querySelector(".btn-comprar");
+    this.innerHTML = "✔ Produto adicionado!";
 
-botao.innerHTML = "✔ Produto adicionado!";
+this.style.background = "#2E7D32";
 
-botao.style.background = "#2E7D32";
-
-botao.disabled = true;
+this.disabled = true;
 
 setTimeout(() => {
 
-    botao.innerHTML = "🛒 Adicionar ao Carrinho";
+    this.innerHTML = "Adicionar ao Carrinho";
 
-    botao.style.background = "";
+    this.style.background = "";
 
-    botao.disabled = false;
+    this.disabled = false;
 
 }, 2000);
 
