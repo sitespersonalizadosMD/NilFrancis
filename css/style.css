@@ -809,7 +809,7 @@ PRODUTOS
 
 .categoria-produto{
 
-    margin-bottom:120px;
+    margin-bottom:70px;
 
 }
 
@@ -817,23 +817,28 @@ PRODUTOS
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
 }
 
 .categoria-header h2{
 
-    font-size:54px;
+    font-size:44px;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
+
+    line-height:1.1;
 
 }
-
 .categoria-header p{
 
-    max-width:650px;
+    max-width:500px;
 
-    margin:auto;
+    margin:8px auto 0;
+
+    font-size:17px;
+
+    line-height:1.5;
 
 }
 
