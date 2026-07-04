@@ -422,3 +422,56 @@ document.querySelectorAll(".produto-tamanhos button").forEach(botao => {
     });
 
 });
+
+/*=========================================
+ADICIONAR AO CARRINHO
+=========================================*/
+
+const listaCarrinho = document.getElementById("listaCarrinho");
+const contadorCarrinho = document.getElementById("contadorCarrinho");
+const subtotal = document.getElementById("subtotal");
+
+let totalItens = 0;
+let total = 0;
+
+document.querySelector(".btn-comprar").addEventListener("click", () => {
+
+    const cor = document.getElementById("corOversized").options[
+        document.getElementById("corOversized").selectedIndex
+    ].text;
+
+    const tamanho = document.querySelector(".produto-tamanhos button.ativo")?.innerText || "-";
+
+    const quantidade = Number(document.querySelector(".quantidade span").innerText);
+
+    const preco = 50;
+
+    listaCarrinho.querySelector(".carrinho-vazio")?.remove();
+
+    const item = document.createElement("div");
+
+    item.classList.add("item-carrinho");
+
+    item.innerHTML = `
+        <h4>Oversized Lisa</h4>
+
+        <p>Cor: ${cor}</p>
+
+        <p>Tamanho: ${tamanho}</p>
+
+        <p>Quantidade: ${quantidade}</p>
+
+        <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
+    `;
+
+    listaCarrinho.appendChild(item);
+
+    totalItens += quantidade;
+
+    contadorCarrinho.innerText = totalItens;
+
+    total += preco * quantidade;
+
+    subtotal.innerText = "R$ " + total.toFixed(2);
+
+});
