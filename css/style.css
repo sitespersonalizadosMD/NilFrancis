@@ -2008,3 +2008,37 @@ PRODUTO V2
     border-color:#68745F;
 
 }
+
+/*=========================================
+ITEM DO CARRINHO
+=========================================*/
+
+.item-carrinho{
+
+    padding:15px;
+    border-bottom:1px solid #eee;
+    margin-bottom:15px;
+
+}
+
+.item-carrinho h4{
+
+    font-size:20px;
+    margin-bottom:10px;
+
+}
+
+.item-carrinho p{
+
+    margin:4px 0;
+    font-size:14px;
+
+}
+
+.item-carrinho .preco{
+
+    color:#68745F;
+    font-weight:bold;
+    margin-top:8px;
+
+}
