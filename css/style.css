@@ -980,10 +980,16 @@ PRODUTOS
 
 .btn-comprar{
 
-    width:max-content;
+    width:90%;
+    max-width:320px;
+    margin:15px auto 0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
 
     background:var(--verde);
-
     color:#fff;
 
     padding:18px 40px;
@@ -994,6 +1000,7 @@ PRODUTOS
 
     font-weight:500;
 
+}
 }
 
 .btn-comprar:hover{
@@ -1994,11 +2001,6 @@ PRODUTO V2
 
 }
 
-.btn-comprar{
-
-    margin-top:10px;
-
-}
 .produto-tamanhos button.ativo{
 
     background:#68745F;
@@ -2040,12 +2042,6 @@ ITEM DO CARRINHO
     color:#68745F;
     font-weight:bold;
     margin-top:8px;
-
-}
-
-.btn-comprar{
-
-    transition: all .3s ease;
 
 }
 
