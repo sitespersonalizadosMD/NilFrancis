@@ -546,3 +546,65 @@ setTimeout(() => {
 }, 2000);
 
 });
+
+/*=========================================
+TRADICIONAL - CARRINHO
+=========================================*/
+
+const botaoComprarTradicional = document.querySelector("#tradicional .btn-comprar");
+
+if (botaoComprarTradicional) {
+
+    botaoComprarTradicional.addEventListener("click", function () {
+
+        const cor = document.getElementById("corTradicional").options[
+            document.getElementById("corTradicional").selectedIndex
+        ].text;
+
+        const tamanho = document.querySelector("#tradicional .produto-tamanhos button.ativo")?.innerText || "-";
+
+        const quantidade = Number(document.querySelector("#tradicional .quantidade span").innerText);
+
+        const preco = 50;
+
+        listaCarrinho.querySelector(".carrinho-vazio")?.remove();
+
+        const item = document.createElement("div");
+
+        item.classList.add("item-carrinho");
+
+        item.innerHTML = `
+            <h4>Camiseta Tradicional Lisa</h4>
+
+            <p>Cor: ${cor}</p>
+
+            <p>Tamanho: ${tamanho}</p>
+
+            <p>Quantidade: ${quantidade}</p>
+
+            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
+        `;
+
+        listaCarrinho.appendChild(item);
+
+        totalItens += quantidade;
+        contadorCarrinho.innerText = totalItens;
+
+        total += preco * quantidade;
+        subtotal.innerText = "R$ " + total.toFixed(2);
+
+        this.innerHTML = "✔ Produto adicionado!";
+        this.style.background = "#2E7D32";
+        this.disabled = true;
+
+        setTimeout(() => {
+
+            this.innerHTML = "🛒 Adicionar ao Carrinho";
+            this.style.background = "";
+            this.disabled = false;
+
+        }, 2000);
+
+    });
+
+}
