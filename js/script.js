@@ -372,33 +372,63 @@ tamanhosTradicional.forEach(botao => {
 });
 
 
-// QUANTIDADE
+/*=========================================
+OVERSIZED - QUANTIDADE
+=========================================*/
 
-const menos = document.querySelector(".quantidade button:first-child");
+const qtdOversized = document.querySelector("#oversized .quantidade span");
+const menosOversized = document.querySelector("#oversized .quantidade button:first-child");
+const maisOversized = document.querySelector("#oversized .quantidade button:last-child");
 
-const mais = document.querySelector(".quantidade button:last-child");
+let quantidadeOversized = 1;
 
-const quantidade = document.querySelector(".quantidade span");
+if (menosOversized && maisOversized && qtdOversized) {
 
-let qtd = 1;
+    maisOversized.addEventListener("click", () => {
 
-if (menos && mais && quantidade) {
-
-    mais.addEventListener("click", () => {
-
-        qtd++;
-
-        quantidade.innerText = qtd;
+        quantidadeOversized++;
+        qtdOversized.innerText = quantidadeOversized;
 
     });
 
-    menos.addEventListener("click", () => {
+    menosOversized.addEventListener("click", () => {
 
-        if (qtd > 1) {
+        if (quantidadeOversized > 1) {
 
-            qtd--;
+            quantidadeOversized--;
+            qtdOversized.innerText = quantidadeOversized;
 
-            quantidade.innerText = qtd;
+        }
+
+    });
+
+}
+
+/*=========================================
+TRADICIONAL - QUANTIDADE
+=========================================*/
+
+const qtdTradicional = document.querySelector("#tradicional .quantidade span");
+const menosTradicional = document.querySelector("#tradicional .quantidade button:first-child");
+const maisTradicional = document.querySelector("#tradicional .quantidade button:last-child");
+
+let quantidadeTradicional = 1;
+
+if (menosTradicional && maisTradicional && qtdTradicional) {
+
+    maisTradicional.addEventListener("click", () => {
+
+        quantidadeTradicional++;
+        qtdTradicional.innerText = quantidadeTradicional;
+
+    });
+
+    menosTradicional.addEventListener("click", () => {
+
+        if (quantidadeTradicional > 1) {
+
+            quantidadeTradicional--;
+            qtdTradicional.innerText = quantidadeTradicional;
 
         }
 
