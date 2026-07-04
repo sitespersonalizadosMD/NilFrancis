@@ -407,6 +407,25 @@ if (imagemOversized && selectCor) {
 
 }
 
+/*=========================================
+TRADICIONAL
+=========================================*/
+
+// FOTO
+
+const imagemTradicional = document.getElementById("imagem-tradicional");
+const selectTradicional = document.getElementById("corTradicional");
+
+if (imagemTradicional && selectTradicional) {
+
+    selectTradicional.addEventListener("change", function () {
+
+        imagemTradicional.src = this.value;
+
+    });
+
+}
+
 
 // TAMANHO
 
