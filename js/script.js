@@ -477,6 +477,25 @@ if (imagemTradicional && selectTradicional) {
 }
 
 /*=========================================
+SHORT SARJA
+=========================================*/
+
+// FOTO
+
+const imagemShort = document.getElementById("imagem-short");
+const selectShort = document.getElementById("corShort");
+
+if (imagemShort && selectShort) {
+
+    selectShort.addEventListener("change", function () {
+
+        imagemShort.src = this.value;
+
+    });
+
+}
+
+/*=========================================
 ADICIONAR AO CARRINHO
 =========================================*/
 
