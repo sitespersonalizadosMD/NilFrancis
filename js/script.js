@@ -441,8 +441,11 @@ SHORT SARJA - QUANTIDADE
 =========================================*/
 
 const qtdShort = document.querySelector("#shorts .quantidade span");
-const menosShort = document.querySelector("#shorts .quantidade button:first-child");
-const maisShort = document.querySelector("#shorts .quantidade button:last-child");
+
+const botoesQuantidadeShort = document.querySelectorAll("#shorts .quantidade button");
+
+const menosShort = botoesQuantidadeShort[0];
+const maisShort = botoesQuantidadeShort[1];
 
 let quantidadeShort = 1;
 
