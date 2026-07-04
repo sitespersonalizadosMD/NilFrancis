@@ -777,3 +777,20 @@ if (imagemBermuda && selectBermuda) {
     });
 
 }
+/*=========================================
+BERMUDA MALHÃO - TAMANHO
+=========================================*/
+
+const tamanhosBermuda = document.querySelectorAll("#bermuda .produto-tamanhos button");
+
+tamanhosBermuda.forEach(botao => {
+
+    botao.addEventListener("click", function () {
+
+        tamanhosBermuda.forEach(t => t.classList.remove("ativo"));
+
+        this.classList.add("ativo");
+
+    });
+
+});
