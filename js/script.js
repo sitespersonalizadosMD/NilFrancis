@@ -813,3 +813,66 @@ if (menosBermuda && maisBermuda && qtdBermuda) {
     });
 
 }
+/*=========================================
+BERMUDA MALHÃO - CARRINHO
+=========================================*/
+
+const botaoComprarBermuda = document.querySelector("#bermuda .btn-comprar");
+
+if (botaoComprarBermuda) {
+
+    botaoComprarBermuda.addEventListener("click", function () {
+
+        const cor = document.getElementById("corBermuda").options[
+            document.getElementById("corBermuda").selectedIndex
+        ].text;
+
+        const tamanho =
+            document.querySelector("#bermuda .produto-tamanhos button.ativo")?.innerText || "-";
+
+        const quantidade =
+            Number(document.querySelector("#bermuda .quantidade span").innerText);
+
+        const preco = 60;
+
+        listaCarrinho.querySelector(".carrinho-vazio")?.remove();
+
+        const item = document.createElement("div");
+
+        item.classList.add("item-carrinho");
+
+        item.innerHTML = `
+            <h4>Bermuda Malhão</h4>
+
+            <p>Cor: ${cor}</p>
+
+            <p>Tamanho: ${tamanho}</p>
+
+            <p>Quantidade: ${quantidade}</p>
+
+            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
+        `;
+
+        listaCarrinho.appendChild(item);
+
+        totalItens += quantidade;
+        contadorCarrinho.innerText = totalItens;
+
+        total += preco * quantidade;
+        subtotal.innerText = "R$ " + total.toFixed(2);
+
+        this.innerHTML = "✔ Produto adicionado!";
+        this.style.background = "#2E7D32";
+        this.disabled = true;
+
+        setTimeout(() => {
+
+            this.innerHTML = "Adicionar ao Carrinho";
+            this.style.background = "";
+            this.disabled = false;
+
+        }, 2000);
+
+    });
+
+}
