@@ -876,3 +876,21 @@ if (botaoComprarBermuda) {
     });
 
 }
+/*=========================================
+REGATA
+=========================================*/
+
+// FOTO
+
+const imagemRegata = document.getElementById("imagem-regata");
+const selectRegata = document.getElementById("corRegata");
+
+if (imagemRegata && selectRegata) {
+
+    selectRegata.addEventListener("change", function () {
+
+        imagemRegata.src = this.value;
+
+    });
+
+}
