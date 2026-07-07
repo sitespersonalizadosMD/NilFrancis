@@ -894,3 +894,119 @@ if (imagemRegata && selectRegata) {
     });
 
 }
+/*=========================================
+REGATA - TAMANHO
+=========================================*/
+
+const tamanhosRegata = document.querySelectorAll("#regata .produto-tamanhos button");
+
+tamanhosRegata.forEach(botao => {
+
+    botao.addEventListener("click", function () {
+
+        tamanhosRegata.forEach(t => t.classList.remove("ativo"));
+
+        this.classList.add("ativo");
+
+    });
+
+});
+/*=========================================
+REGATA - QUANTIDADE
+=========================================*/
+
+const qtdRegata = document.querySelector("#regata .quantidade span");
+
+const botoesQuantidadeRegata = document.querySelectorAll("#regata .quantidade button");
+
+const menosRegata = botoesQuantidadeRegata[0];
+const maisRegata = botoesQuantidadeRegata[1];
+
+let quantidadeRegata = 1;
+
+if (menosRegata && maisRegata && qtdRegata) {
+
+    maisRegata.addEventListener("click", () => {
+
+        quantidadeRegata++;
+
+        qtdRegata.innerText = quantidadeRegata;
+
+    });
+
+    menosRegata.addEventListener("click", () => {
+
+        if (quantidadeRegata > 1) {
+
+            quantidadeRegata--;
+
+            qtdRegata.innerText = quantidadeRegata;
+
+        }
+
+    });
+
+}
+/*=========================================
+REGATA - CARRINHO
+=========================================*/
+
+const botaoComprarRegata = document.querySelector("#regata .btn-comprar");
+
+if (botaoComprarRegata) {
+
+    botaoComprarRegata.addEventListener("click", function () {
+
+        const cor = document.getElementById("corRegata").options[
+            document.getElementById("corRegata").selectedIndex
+        ].text;
+
+        const tamanho =
+            document.querySelector("#regata .produto-tamanhos button.ativo")?.innerText || "-";
+
+        const quantidade =
+            Number(document.querySelector("#regata .quantidade span").innerText);
+
+        const preco = 50;
+
+        listaCarrinho.querySelector(".carrinho-vazio")?.remove();
+
+        const item = document.createElement("div");
+
+        item.classList.add("item-carrinho");
+
+        item.innerHTML = `
+            <h4>Regata Machão</h4>
+
+            <p>Cor: ${cor}</p>
+
+            <p>Tamanho: ${tamanho}</p>
+
+            <p>Quantidade: ${quantidade}</p>
+
+            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
+        `;
+
+        listaCarrinho.appendChild(item);
+
+        totalItens += quantidade;
+        contadorCarrinho.innerText = totalItens;
+
+        total += preco * quantidade;
+        subtotal.innerText = "R$ " + total.toFixed(2);
+
+        this.innerHTML = "✔ Produto adicionado!";
+        this.style.background = "#2E7D32";
+        this.disabled = true;
+
+        setTimeout(() => {
+
+            this.innerHTML = "Adicionar ao Carrinho";
+            this.style.background = "";
+            this.disabled = false;
+
+        }, 2000);
+
+    });
+
+}
