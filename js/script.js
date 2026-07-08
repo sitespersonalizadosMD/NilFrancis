@@ -1010,3 +1010,46 @@ if (botaoComprarRegata) {
     });
 
 }
+/*=========================================
+CHECKOUT
+=========================================*/
+
+const btnContinuar = document.getElementById("continuarPedido");
+const btnVoltar = document.getElementById("voltarCarrinho");
+
+const listaCarrinho = document.getElementById("listaCarrinho");
+const dadosEntrega = document.querySelector(".dados-entrega");
+const footerCarrinho = document.querySelector(".carrinho-footer");
+const acoesCheckout = document.querySelector(".acoes-checkout");
+
+if (btnContinuar) {
+
+    btnContinuar.addEventListener("click", () => {
+
+        listaCarrinho.style.display = "none";
+
+        dadosEntrega.classList.add("ativo");
+
+        btnContinuar.style.display = "none";
+
+        acoesCheckout.style.display = "flex";
+
+    });
+
+}
+
+if (btnVoltar) {
+
+    btnVoltar.addEventListener("click", () => {
+
+        listaCarrinho.style.display = "block";
+
+        dadosEntrega.classList.remove("ativo");
+
+        btnContinuar.style.display = "block";
+
+        acoesCheckout.style.display = "none";
+
+    });
+
+}
