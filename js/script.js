@@ -613,9 +613,9 @@ const tamanho = tamanhoSelecionado.innerText;
 
     subtotal.innerText = "R$ " + total.toFixed(2);
 
-    this.innerHTML = "✔ Produto adicionado!";
+    this.innerHTML = " Adicionado ao Carrinho";
 
-this.style.background = "#2E7D32";
+this.style.background = "#68745F";
 
 this.disabled = true;
 
