@@ -1052,3 +1052,63 @@ if (btnVoltar) {
 
     });
     }
+/*=========================================
+FINALIZAR PEDIDO
+=========================================*/
+
+const btnFinalizar = document.getElementById("finalizarPedido");
+
+if (btnFinalizar) {
+
+    btnFinalizar.addEventListener("click", () => {
+
+        const nome = document.getElementById("nomeCliente").value;
+        const cep = document.getElementById("cepCliente").value;
+        const rua = document.getElementById("ruaCliente").value;
+        const numero = document.getElementById("numeroCliente").value;
+        const complemento = document.getElementById("complementoCliente").value;
+        const bairro = document.getElementById("bairroCliente").value;
+        const cidade = document.getElementById("cidadeCliente").value;
+        const estado = document.getElementById("estadoCliente").value;
+        const pagamento = document.getElementById("pagamentoCliente").value;
+        const observacoes = document.getElementById("observacoesCliente").value;
+
+        let mensagem = `🛍️ *NOVO PEDIDO - NIL FRANCIS*%0A%0A`;
+
+        mensagem += `👤 *Cliente:* ${nome}%0A`;
+        mensagem += `📍 *Endereço:* ${rua}, ${numero}%0A`;
+
+        if (complemento !== "") {
+            mensagem += `Complemento: ${complemento}%0A`;
+        }
+
+        mensagem += `${bairro}%0A`;
+        mensagem += `${cidade} - ${estado}%0A`;
+        mensagem += `CEP: ${cep}%0A%0A`;
+
+        mensagem += `🛒 *Produtos:*%0A%0A`;
+
+        document.querySelectorAll(".item-carrinho").forEach(item => {
+
+            mensagem += item.innerText.replace(/\n/g,"%0A") + "%0A%0A";
+
+        });
+
+        mensagem += `💰 *Total:* ${subtotal.innerText}%0A`;
+
+        mensagem += `💳 *Pagamento:* ${pagamento}%0A%0A`;
+
+        if (observacoes !== "") {
+
+            mensagem += `📝 *Observações:* ${observacoes}%0A`;
+
+        }
+
+        window.open(
+            `https://wa.me/5521997754893?text=${mensagem}`,
+            "_blank"
+        );
+
+    });
+
+}
