@@ -567,7 +567,19 @@ botaoComprar.addEventListener("click", function () {
         document.getElementById("corOversized").selectedIndex
     ].text;
 
-    const tamanho = document.querySelector(".produto-tamanhos button.ativo")?.innerText || "-";
+    const tamanhoSelecionado = document.querySelector(
+    "#oversized .produto-tamanhos button.ativo"
+);
+
+if (!tamanhoSelecionado) {
+
+    alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+    return;
+
+}
+
+const tamanho = tamanhoSelecionado.innerText;
 
     const quantidade = Number(document.querySelector(".quantidade span").innerText);
 
@@ -633,7 +645,18 @@ if (botaoComprarTradicional) {
             document.getElementById("corTradicional").selectedIndex
         ].text;
 
-        const tamanho = document.querySelector("#tradicional .produto-tamanhos button.ativo")?.innerText || "-";
+        const tamanhoSelecionado =
+document.querySelector("#tradicional .produto-tamanhos button.ativo");
+
+if (!tamanhoSelecionado) {
+
+    alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+    return;
+
+}
+
+const tamanho = tamanhoSelecionado.innerText;
 
         const quantidade = Number(document.querySelector("#tradicional .quantidade span").innerText);
 
@@ -694,7 +717,18 @@ if (botaoComprarShort) {
             document.getElementById("corShort").selectedIndex
         ].text;
 
-        const tamanho = document.querySelector("#shorts .produto-tamanhos button.ativo")?.innerText || "-";
+        const tamanhoSelecionado =
+document.querySelector("#shorts .produto-tamanhos button.ativo");
+
+if (!tamanhoSelecionado) {
+
+    alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+    return;
+
+}
+
+const tamanho = tamanhoSelecionado.innerText;
 
         const quantidade = Number(document.querySelector("#shorts .quantidade span").innerText);
 
@@ -827,9 +861,19 @@ if (botaoComprarBermuda) {
             document.getElementById("corBermuda").selectedIndex
         ].text;
 
-        const tamanho =
-            document.querySelector("#bermuda .produto-tamanhos button.ativo")?.innerText || "-";
+        const tamanhoSelecionado = document.querySelector(
+    "#bermuda .produto-tamanhos button.ativo"
+);
 
+if (!tamanhoSelecionado) {
+
+    alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+    return;
+
+}
+
+const tamanho = tamanhoSelecionado.innerText;
         const quantidade =
             Number(document.querySelector("#bermuda .quantidade span").innerText);
 
@@ -961,8 +1005,19 @@ if (botaoComprarRegata) {
             document.getElementById("corRegata").selectedIndex
         ].text;
 
-        const tamanho =
-            document.querySelector("#regata .produto-tamanhos button.ativo")?.innerText || "-";
+        const tamanhoSelecionado = document.querySelector(
+    "#regata .produto-tamanhos button.ativo"
+);
+
+if (!tamanhoSelecionado) {
+
+    alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+    return;
+
+}
+
+const tamanho = tamanhoSelecionado.innerText;
 
         const quantidade =
             Number(document.querySelector("#regata .quantidade span").innerText);
