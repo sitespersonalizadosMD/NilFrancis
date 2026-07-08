@@ -2238,3 +2238,32 @@ CHECKOUT
     margin-top:0;
 
 }
+
+.carrinho-footer select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    background:#fff;
+
+}
+.label-pagamento{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
