@@ -2133,3 +2133,18 @@ DADOS DE ENTREGA
     resize:none;
 
 }
+/*=========================================
+CHECKOUT
+=========================================*/
+
+.dados-entrega{
+
+    display:none;
+
+}
+
+.dados-entrega.ativo{
+
+    display:flex;
+
+}
