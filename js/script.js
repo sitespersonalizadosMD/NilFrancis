@@ -1049,5 +1049,3 @@ btnVoltar.addEventListener("click", () => {
     acoesCheckout.style.display = "none";
 
 });
-
-}
