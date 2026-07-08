@@ -1112,21 +1112,7 @@ if (btnFinalizar) {
     });
 
 }
-if (
-    nome.trim() === "" ||
-    cep.trim() === "" ||
-    rua.trim() === "" ||
-    numero.trim() === "" ||
-    bairro.trim() === "" ||
-    cidade.trim() === "" ||
-    estado.trim() === ""
-) {
 
-    alert("Preencha todos os campos obrigatórios.");
-
-    return;
-
-}
 /*=========================================
 BUSCAR CEP
 =========================================*/
