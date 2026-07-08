@@ -1073,6 +1073,19 @@ if (btnFinalizar) {
         const pagamento = document.getElementById("pagamentoCliente").value;
         const observacoes = document.getElementById("observacoesCliente").value;
 
+        if (
+    nome.trim() === "" ||
+    cep.trim() === "" ||
+    rua.trim() === "" ||
+    numero.trim() === "" ||
+    bairro.trim() === "" ||
+    cidade.trim() === "" ||
+    estado.trim() === ""
+) {
+    alert("Preencha todos os campos obrigatórios.");
+    return;
+}
+
         let mensagem = `🛍️ *NOVO PEDIDO - NIL FRANCIS*%0A%0A`;
 
         mensagem += `👤 *Cliente:* ${nome}%0A`;
