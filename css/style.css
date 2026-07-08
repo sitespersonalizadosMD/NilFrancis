@@ -2205,3 +2205,28 @@ CHECKOUT
     transform:translateY(-2px);
 
 }
+.cep-info{
+
+    display:block;
+
+    margin-top:-8px;
+
+    margin-bottom:10px;
+
+    font-size:13px;
+
+    color:#777;
+
+    font-style:italic;
+
+}
+
+.dados-entrega input[readonly]{
+
+    background:#F5F5F5;
+
+    color:#666;
+
+    cursor:not-allowed;
+
+}
