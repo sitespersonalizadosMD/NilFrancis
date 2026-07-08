@@ -1038,14 +1038,17 @@ if (btnContinuar) {
 
 }
 
-btnVoltar.addEventListener("click", () => {
+if (btnVoltar) {
 
-    listaCarrinho.style.display = "block";
+    btnVoltar.addEventListener("click", () => {
 
-    footerCarrinho.style.display = "block";
+        listaCarrinho.style.display = "block";
 
-    dadosEntrega.classList.remove("ativo");
+        footerCarrinho.style.display = "block";
 
-    acoesCheckout.style.display = "none";
+        dadosEntrega.classList.remove("ativo";
 
-});
+        acoesCheckout.style.display = "none";
+
+    });
+    }
