@@ -1127,3 +1127,45 @@ if (
     return;
 
 }
+/*=========================================
+BUSCAR CEP
+=========================================*/
+
+const cepCliente = document.getElementById("cepCliente");
+
+if (cepCliente) {
+
+    cepCliente.addEventListener("blur", async () => {
+
+        const cep = cepCliente.value.replace(/\D/g, "");
+
+        if (cep.length !== 8) return;
+
+        try {
+
+            const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+
+            const endereco = await resposta.json();
+
+            if (endereco.erro) {
+
+                alert("CEP não encontrado.");
+
+                return;
+
+            }
+
+            document.getElementById("ruaCliente").value = endereco.logradouro;
+            document.getElementById("bairroCliente").value = endereco.bairro;
+            document.getElementById("cidadeCliente").value = endereco.localidade;
+            document.getElementById("estadoCliente").value = endereco.uf;
+
+        } catch {
+
+            alert("Erro ao consultar o CEP.");
+
+        }
+
+    });
+
+}
