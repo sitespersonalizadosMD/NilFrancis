@@ -1019,7 +1019,6 @@ const btnVoltar = document.getElementById("voltarCarrinho");
 
 
 const dadosEntrega = document.querySelector(".dados-entrega");
-const footerCarrinho = document.querySelector(".carrinho-footer");
 const acoesCheckout = document.querySelector(".acoes-checkout");
 
 if (btnContinuar) {
@@ -1042,13 +1041,13 @@ if (btnVoltar) {
 
     btnVoltar.addEventListener("click", () => {
 
-        listaCarrinho.style.display = "block";
+       listaCarrinho.style.display = "block";
 
-        dadosEntrega.classList.remove("ativo");
+footerCarrinho.style.display = "block";
 
-        btnContinuar.style.display = "block";
+dadosEntrega.classList.remove("ativo");
 
-        acoesCheckout.style.display = "none";
+acoesCheckout.style.display = "none";
 
     });
 
