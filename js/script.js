@@ -1020,35 +1020,34 @@ const btnVoltar = document.getElementById("voltarCarrinho");
 
 const dadosEntrega = document.querySelector(".dados-entrega");
 const acoesCheckout = document.querySelector(".acoes-checkout");
+const footerCarrinho = document.querySelector(".carrinho-footer");
 
 if (btnContinuar) {
 
     btnContinuar.addEventListener("click", () => {
 
-        listaCarrinho.style.display = "none";
+    listaCarrinho.style.display = "none";
 
-        dadosEntrega.classList.add("ativo");
+    footerCarrinho.style.display = "none";
 
-        btnContinuar.style.display = "none";
+    dadosEntrega.classList.add("ativo");
 
-        acoesCheckout.style.display = "flex";
+    acoesCheckout.style.display = "flex";
 
-    });
+});
 
 }
 
-if (btnVoltar) {
+btnVoltar.addEventListener("click", () => {
 
-    btnVoltar.addEventListener("click", () => {
+    listaCarrinho.style.display = "block";
 
-       listaCarrinho.style.display = "block";
+    footerCarrinho.style.display = "block";
 
-footerCarrinho.style.display = "block";
+    dadosEntrega.classList.remove("ativo");
 
-dadosEntrega.classList.remove("ativo");
+    acoesCheckout.style.display = "none";
 
-acoesCheckout.style.display = "none";
-
-    });
+});
 
 }
