@@ -2174,3 +2174,34 @@ CHECKOUT
     flex:1;
 
 }
+.btn-secundario{
+
+    flex:1;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#E5E5E5;
+
+    color:#2B2B2B;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-secundario:hover{
+
+    background:#D2D2D2;
+
+    transform:translateY(-2px);
+
+}
