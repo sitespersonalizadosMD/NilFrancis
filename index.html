@@ -1580,15 +1580,6 @@ CARRINHO LATERAL
     type="text"
     id="estadoCliente"
     placeholder="Estado">
-   
-<select id="pagamentoCliente">
-
-    <option>Pix</option>
-    <option>Cartão de Crédito</option>
-    <option>Cartão de Débito</option>
-    <option>Dinheiro</option>
-
-</select>
 
 <textarea
     id="observacoesCliente"
@@ -1617,8 +1608,22 @@ CARRINHO LATERAL
 
     <div class="carrinho-footer">
 
-        <h3>
+         <label class="label-pagamento">
 
+        Forma de pagamento
+
+    </label>
+
+
+            <select id="pagamentoCliente">
+
+    <option>Pix</option>
+    <option>Cartão de Crédito</option>
+    <option>Cartão de Débito</option>
+    <option>Dinheiro</option>
+
+</select>
+<h3>
             Total:
 
             <span id="totalCarrinho">
