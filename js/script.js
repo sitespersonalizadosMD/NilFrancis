@@ -1017,7 +1017,7 @@ CHECKOUT
 const btnContinuar = document.getElementById("continuarPedido");
 const btnVoltar = document.getElementById("voltarCarrinho");
 
-const listaCarrinho = document.getElementById("listaCarrinho");
+
 const dadosEntrega = document.querySelector(".dados-entrega");
 const footerCarrinho = document.querySelector(".carrinho-footer");
 const acoesCheckout = document.querySelector(".acoes-checkout");
