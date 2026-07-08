@@ -2163,9 +2163,11 @@ CHECKOUT
 
     display:none;
 
-    gap:10px;
+    gap:15px;
 
     margin-top:20px;
+
+    justify-content:space-between;
 
 }
 
@@ -2176,7 +2178,7 @@ CHECKOUT
 }
 .btn-secundario{
 
-    flex:1;
+    width:48%;
 
     padding:18px;
 
@@ -2202,8 +2204,6 @@ CHECKOUT
 
     background:#D2D2D2;
 
-    transform:translateY(-2px);
-
 }
 .cep-info{
 
@@ -2228,5 +2228,13 @@ CHECKOUT
     color:#666;
 
     cursor:not-allowed;
+
+}
+
+.acoes-checkout .btn-finalizar{
+
+    width:48%;
+
+    margin-top:0;
 
 }
