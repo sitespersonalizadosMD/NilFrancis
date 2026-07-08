@@ -1046,7 +1046,7 @@ if (btnVoltar) {
 
         footerCarrinho.style.display = "block";
 
-        dadosEntrega.classList.remove("ativo";
+        dadosEntrega.classList.remove("ativo";)
 
         acoesCheckout.style.display = "none";
 
