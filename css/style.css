@@ -2267,3 +2267,52 @@ CHECKOUT
     color:#555;
 
 }
+/*=========================================
+PARCELAMENTO
+=========================================*/
+
+.opcoes-cartao{
+
+    display:none;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+    padding:15px;
+
+    background:#F8F8F8;
+
+    border-radius:12px;
+
+}
+
+.opcoes-cartao label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:10px 0;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.opcoes-cartao input{
+
+    transform:scale(1.2);
+
+}
+
+.valor-parcela{
+
+    color:#68745F;
+
+    font-weight:600;
+
+}
