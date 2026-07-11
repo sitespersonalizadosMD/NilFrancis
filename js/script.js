@@ -1107,6 +1107,50 @@ if (btnVoltar) {
 
     });
     }
+const pagamentoSelect = document.getElementById("pagamentoCliente");
+
+const opcoesCartao = document.getElementById("opcoesCartao");
+
+const opcao2x = document.getElementById("opcao2x");
+
+if (pagamentoSelect) {
+
+    pagamentoSelect.addEventListener("change", () => {
+
+        if (pagamentoSelect.value === "Cartão de Crédito") {
+
+            opcoesCartao.style.display = "block";
+
+            if (total >= 100) {
+
+                const valorParcela = (total / 2).toFixed(2);
+
+                opcao2x.innerHTML = `
+                    <input
+                        type="radio"
+                        name="parcelamento"
+                        value="2x">
+
+                    2x de R$ ${valorParcela} sem juros
+                `;
+
+                opcao2x.style.display = "flex";
+
+            } else {
+
+                opcao2x.style.display = "none";
+
+            }
+
+        } else {
+
+            opcoesCartao.style.display = "none";
+
+        }
+
+    });
+
+}
 /*=========================================
 FINALIZAR PEDIDO
 =========================================*/
@@ -1126,45 +1170,6 @@ if (btnFinalizar) {
         const cidade = document.getElementById("cidadeCliente").value;
         const estado = document.getElementById("estadoCliente").value;
         const pagamento = document.getElementById("pagamentoCliente").value;
-
-        const opcoesCartao = document.getElementById("opcoesCartao");
-
-const opcao2x = document.getElementById("opcao2x");
-
-pagamento.addEventListener("change", () => {
-
-    if (pagamento.value === "Cartão de Crédito") {
-
-        opcoesCartao.style.display = "block";
-
-        if (total >= 100) {
-
-            const valorParcela = (total / 2).toFixed(2);
-
-            opcao2x.innerHTML = `
-                <input
-                    type="radio"
-                    name="parcelamento"
-                    value="2x">
-
-                2x de R$ ${valorParcela} sem juros
-            `;
-
-            opcao2x.style.display = "flex";
-
-        } else {
-
-            opcao2x.style.display = "none";
-
-        }
-
-    } else {
-
-        opcoesCartao.style.display = "none";
-
-    }
-
-});
         const observacoes = document.getElementById("observacoesCliente").value;
 
         if (
