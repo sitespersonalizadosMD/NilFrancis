@@ -592,16 +592,26 @@ const tamanho = tamanhoSelecionado.innerText;
     item.classList.add("item-carrinho");
 
     item.innerHTML = `
-        <h4>Oversized Lisa</h4>
+<div class="item-topo">
 
-        <p>Cor: ${cor}</p>
+    <h4>Oversized Lisa</h4>
 
-        <p>Tamanho: ${tamanho}</p>
+    <button class="btn-remover">
+        <i class="fa-solid fa-trash"></i>
+    </button>
 
-        <p>Quantidade: ${quantidade}</p>
+</div>
 
-        <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
-    `;
+<p>Cor: ${cor}</p>
+
+<p>Tamanho: ${tamanho}</p>
+
+<p>Quantidade: ${quantidade}</p>
+
+<p class="preco">
+    R$ ${(preco * quantidade).toFixed(2)}
+</p>
+`;
 
     listaCarrinho.appendChild(item);
 
@@ -668,17 +678,27 @@ const tamanho = tamanhoSelecionado.innerText;
 
         item.classList.add("item-carrinho");
 
-        item.innerHTML = `
-            <h4>Camiseta Tradicional Lisa</h4>
+       item.innerHTML = `
+<div class="item-topo">
 
-            <p>Cor: ${cor}</p>
+    <h4>Tradicional</h4>
 
-            <p>Tamanho: ${tamanho}</p>
+    <button class="btn-remover">
+        <i class="fa-solid fa-trash"></i>
+    </button>
 
-            <p>Quantidade: ${quantidade}</p>
+</div>
 
-            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
-        `;
+<p>Cor: ${cor}</p>
+
+<p>Tamanho: ${tamanho}</p>
+
+<p>Quantidade: ${quantidade}</p>
+
+<p class="preco">
+    R$ ${(preco * quantidade).toFixed(2)}
+</p>
+`;
 
         listaCarrinho.appendChild(item);
 
@@ -741,16 +761,26 @@ const tamanho = tamanhoSelecionado.innerText;
         item.classList.add("item-carrinho");
 
         item.innerHTML = `
-            <h4>Short Sarja</h4>
+<div class="item-topo">
 
-            <p>Cor: ${cor}</p>
+    <h4>Short Sarja</h4>
 
-            <p>Tamanho: ${tamanho}</p>
+    <button class="btn-remover">
+        <i class="fa-solid fa-trash"></i>
+    </button>
 
-            <p>Quantidade: ${quantidade}</p>
+</div>
 
-            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
-        `;
+<p>Cor: ${cor}</p>
+
+<p>Tamanho: ${tamanho}</p>
+
+<p>Quantidade: ${quantidade}</p>
+
+<p class="preco">
+    R$ ${(preco * quantidade).toFixed(2)}
+</p>
+`;
 
         listaCarrinho.appendChild(item);
 
@@ -885,17 +915,27 @@ const tamanho = tamanhoSelecionado.innerText;
 
         item.classList.add("item-carrinho");
 
-        item.innerHTML = `
-            <h4>Bermuda Malhão</h4>
+      item.innerHTML = `
+<div class="item-topo">
 
-            <p>Cor: ${cor}</p>
+    <h4>Bermuda Malhão</h4>
 
-            <p>Tamanho: ${tamanho}</p>
+    <button class="btn-remover">
+        <i class="fa-solid fa-trash"></i>
+    </button>
 
-            <p>Quantidade: ${quantidade}</p>
+</div>
 
-            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
-        `;
+<p>Cor: ${cor}</p>
+
+<p>Tamanho: ${tamanho}</p>
+
+<p>Quantidade: ${quantidade}</p>
+
+<p class="preco">
+    R$ ${(preco * quantidade).toFixed(2)}
+</p>
+`;
 
         listaCarrinho.appendChild(item);
 
@@ -1030,17 +1070,27 @@ const tamanho = tamanhoSelecionado.innerText;
 
         item.classList.add("item-carrinho");
 
-        item.innerHTML = `
-            <h4>Regata Machão</h4>
+       item.innerHTML = `
+<div class="item-topo">
 
-            <p>Cor: ${cor}</p>
+    <h4>Regata Machão</h4>
 
-            <p>Tamanho: ${tamanho}</p>
+    <button class="btn-remover">
+        <i class="fa-solid fa-trash"></i>
+    </button>
 
-            <p>Quantidade: ${quantidade}</p>
+</div>
 
-            <p class="preco">R$ ${(preco * quantidade).toFixed(2)}</p>
-        `;
+<p>Cor: ${cor}</p>
+
+<p>Tamanho: ${tamanho}</p>
+
+<p>Quantidade: ${quantidade}</p>
+
+<p class="preco">
+    R$ ${(preco * quantidade).toFixed(2)}
+</p>
+`;
 
         listaCarrinho.appendChild(item);
 
