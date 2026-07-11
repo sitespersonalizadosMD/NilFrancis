@@ -754,15 +754,15 @@ const tamanho = tamanhoSelecionado.innerText;
     item.remove();
 
     // Se o carrinho ficou vazio
-    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+   if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
 
-        listaCarrinho.innerHTML = `
-            <p class="carrinho-vazio">
-                Seu carrinho está vazio.
-            </p>
-        ;
+    listaCarrinho.innerHTML = `
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+    `;
 
-    }
+}
 
 });
 
@@ -868,15 +868,15 @@ const tamanho = tamanhoSelecionado.innerText;
     item.remove();
 
     // Se o carrinho ficou vazio
-    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+   if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
 
-        listaCarrinho.innerHTML = `
-            <p class="carrinho-vazio">
-                Seu carrinho está vazio.
-            </p>
-        ;
+    listaCarrinho.innerHTML = `
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+    `;
 
-    }
+}
 
 });
 
@@ -1055,15 +1055,15 @@ const tamanho = tamanhoSelecionado.innerText;
     item.remove();
 
     // Se o carrinho ficou vazio
-    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+   if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
 
-        listaCarrinho.innerHTML = `
-            <p class="carrinho-vazio">
-                Seu carrinho está vazio.
-            </p>
-        ;
+    listaCarrinho.innerHTML = `
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+    `;
 
-    }
+}
 
 });
 
@@ -1242,15 +1242,15 @@ const tamanho = tamanhoSelecionado.innerText;
     item.remove();
 
     // Se o carrinho ficou vazio
-    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+   if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
 
-        listaCarrinho.innerHTML = `
-            <p class="carrinho-vazio">
-                Seu carrinho está vazio.
-            </p>
-        ;
+    listaCarrinho.innerHTML = `
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+    `;
 
-    }
+}
 
 });
 
