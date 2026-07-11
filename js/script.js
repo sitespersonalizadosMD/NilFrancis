@@ -615,6 +615,38 @@ const tamanho = tamanhoSelecionado.innerText;
 
     listaCarrinho.appendChild(item);
 
+    item.querySelector(".btn-remover").addEventListener("click", () => {
+
+    // Atualiza o valor total
+    total -= preco * quantidade;
+
+    if (total < 0) total = 0;
+
+    subtotal.innerText = `R$ ${total.toFixed(2)}`;
+
+    // Atualiza o contador
+    totalItens -= quantidade;
+
+    if (totalItens < 0) totalItens = 0;
+
+    contadorCarrinho.innerText = totalItens;
+
+    // Remove o item
+    item.remove();
+
+    // Se o carrinho ficou vazio
+    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        ;
+
+    }
+
+});
+
     totalItens += quantidade;
 
     contadorCarrinho.innerText = totalItens;
@@ -702,6 +734,38 @@ const tamanho = tamanhoSelecionado.innerText;
 
         listaCarrinho.appendChild(item);
 
+        item.querySelector(".btn-remover").addEventListener("click", () => {
+
+    // Atualiza o valor total
+    total -= preco * quantidade;
+
+    if (total < 0) total = 0;
+
+    subtotal.innerText = `R$ ${total.toFixed(2)}`;
+
+    // Atualiza o contador
+    totalItens -= quantidade;
+
+    if (totalItens < 0) totalItens = 0;
+
+    contadorCarrinho.innerText = totalItens;
+
+    // Remove o item
+    item.remove();
+
+    // Se o carrinho ficou vazio
+    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        ;
+
+    }
+
+});
+
         totalItens += quantidade;
         contadorCarrinho.innerText = totalItens;
 
@@ -783,6 +847,38 @@ const tamanho = tamanhoSelecionado.innerText;
 `;
 
         listaCarrinho.appendChild(item);
+
+        item.querySelector(".btn-remover").addEventListener("click", () => {
+
+    // Atualiza o valor total
+    total -= preco * quantidade;
+
+    if (total < 0) total = 0;
+
+    subtotal.innerText = `R$ ${total.toFixed(2)}`;
+
+    // Atualiza o contador
+    totalItens -= quantidade;
+
+    if (totalItens < 0) totalItens = 0;
+
+    contadorCarrinho.innerText = totalItens;
+
+    // Remove o item
+    item.remove();
+
+    // Se o carrinho ficou vazio
+    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        ;
+
+    }
+
+});
 
         totalItens += quantidade;
         contadorCarrinho.innerText = totalItens;
@@ -939,6 +1035,38 @@ const tamanho = tamanhoSelecionado.innerText;
 
         listaCarrinho.appendChild(item);
 
+        item.querySelector(".btn-remover").addEventListener("click", () => {
+
+    // Atualiza o valor total
+    total -= preco * quantidade;
+
+    if (total < 0) total = 0;
+
+    subtotal.innerText = `R$ ${total.toFixed(2)}`;
+
+    // Atualiza o contador
+    totalItens -= quantidade;
+
+    if (totalItens < 0) totalItens = 0;
+
+    contadorCarrinho.innerText = totalItens;
+
+    // Remove o item
+    item.remove();
+
+    // Se o carrinho ficou vazio
+    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        ;
+
+    }
+
+});
+
         totalItens += quantidade;
         contadorCarrinho.innerText = totalItens;
 
@@ -1093,6 +1221,38 @@ const tamanho = tamanhoSelecionado.innerText;
 `;
 
         listaCarrinho.appendChild(item);
+
+        item.querySelector(".btn-remover").addEventListener("click", () => {
+
+    // Atualiza o valor total
+    total -= preco * quantidade;
+
+    if (total < 0) total = 0;
+
+    subtotal.innerText = `R$ ${total.toFixed(2)}`;
+
+    // Atualiza o contador
+    totalItens -= quantidade;
+
+    if (totalItens < 0) totalItens = 0;
+
+    contadorCarrinho.innerText = totalItens;
+
+    // Remove o item
+    item.remove();
+
+    // Se o carrinho ficou vazio
+    if (listaCarrinho.querySelectorAll(".item-carrinho").length === 0) {
+
+        listaCarrinho.innerHTML = `
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        ;
+
+    }
+
+});
 
         totalItens += quantidade;
         contadorCarrinho.innerText = totalItens;
