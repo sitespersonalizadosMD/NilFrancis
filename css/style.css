@@ -2571,3 +2571,79 @@ ITEM DO CARRINHO
     }
 
 }
+/* =========================================
+   CARROSSEL - NOSSA COLEÇÃO / BERMUDAS
+========================================= */
+
+.categoria-imagem-carrossel{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+
+.categoria-imagem-carrossel img{
+    width:100%;
+    height:auto;
+    display:block;
+
+    transition:opacity .3s ease,
+               transform .3s ease;
+}
+
+
+/* SETAS */
+
+.categoria-imagem-carrossel .carrossel-btn{
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:#68745F;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+
+    border:none;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+    z-index:5;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+
+.categoria-imagem-carrossel .carrossel-btn:hover{
+
+    background:#68745F;
+
+    color:#fff;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+
+.categoria-bermuda-prev{
+    left:12px;
+}
+
+
+.categoria-bermuda-next{
+    right:12px;
+}
