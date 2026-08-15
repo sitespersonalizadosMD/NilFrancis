@@ -1695,3 +1695,110 @@ if (cepCliente) {
     });
 
 }
+/*=========================================
+NOSSA COLEÇÃO - CARROSSEL BERMUDAS
+=========================================*/
+
+const imagemColecaoBermuda =
+    document.getElementById("imagemColecaoBermuda");
+
+const botaoColecaoBermudaAnterior =
+    document.querySelector(".categoria-bermuda-prev");
+
+const botaoColecaoBermudaProxima =
+    document.querySelector(".categoria-bermuda-next");
+
+
+const imagensColecaoBermuda = [
+
+    "bermudamodelo.png",
+
+    "bermudamodelo2.png",
+
+    "bermudamodelo3.png",
+
+    "fotoscoresbermuda.png",
+
+    "Fotomodelobermuda.png"
+
+];
+
+
+let indiceColecaoBermuda = 0;
+
+
+/* TROCAR IMAGEM */
+
+function mostrarImagemColecaoBermuda(indice){
+
+    if(!imagemColecaoBermuda) return;
+
+    imagemColecaoBermuda.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        imagemColecaoBermuda.src =
+            imagensColecaoBermuda[indice];
+
+        imagemColecaoBermuda.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if(botaoColecaoBermudaAnterior){
+
+    botaoColecaoBermudaAnterior.addEventListener(
+        "click",
+        function(){
+
+            indiceColecaoBermuda--;
+
+            if(indiceColecaoBermuda < 0){
+
+                indiceColecaoBermuda =
+                    imagensColecaoBermuda.length - 1;
+
+            }
+
+            mostrarImagemColecaoBermuda(
+                indiceColecaoBermuda
+            );
+
+        }
+    );
+
+}
+
+
+/* PRÓXIMA FOTO */
+
+if(botaoColecaoBermudaProxima){
+
+    botaoColecaoBermudaProxima.addEventListener(
+        "click",
+        function(){
+
+            indiceColecaoBermuda++;
+
+            if(
+                indiceColecaoBermuda >=
+                imagensColecaoBermuda.length
+            ){
+
+                indiceColecaoBermuda = 0;
+
+            }
+
+            mostrarImagemColecaoBermuda(
+                indiceColecaoBermuda
+            );
+
+        }
+    );
+
+}
