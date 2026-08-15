@@ -930,6 +930,10 @@ const galeriasBermuda = {
 
     "Bermuda Malhão Marrom.jpeg": [
         "Bermuda Malhão Marrom.jpeg"
+    ],
+
+     "verdeaguabermuda.png": [
+        "verdeaguabermuda.png"
     ]
 
 };
