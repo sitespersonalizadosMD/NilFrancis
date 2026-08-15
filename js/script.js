@@ -1217,6 +1217,85 @@ const tamanho = tamanhoSelecionado.innerText;
     });
 
 }
+
+/*=========================================
+BERMUDA MALHÃO - MEDIDAS
+=========================================*/
+
+const abrirMedidasBermuda =
+    document.getElementById("abrirMedidasBermuda");
+
+const fecharMedidasBermuda =
+    document.getElementById("fecharMedidasBermuda");
+
+const modalMedidasBermuda =
+    document.getElementById("modalMedidasBermuda");
+
+
+/* ABRIR */
+
+if(abrirMedidasBermuda && modalMedidasBermuda){
+
+    abrirMedidasBermuda.addEventListener("click", () => {
+
+        modalMedidasBermuda.classList.add("ativo");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+}
+
+
+/* FECHAR NO X */
+
+if(fecharMedidasBermuda && modalMedidasBermuda){
+
+    fecharMedidasBermuda.addEventListener("click", () => {
+
+        modalMedidasBermuda.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+
+/* FECHAR CLICANDO FORA */
+
+if(modalMedidasBermuda){
+
+    modalMedidasBermuda.addEventListener("click", (evento) => {
+
+        if(evento.target === modalMedidasBermuda){
+
+            modalMedidasBermuda.classList.remove("ativo");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener("keydown", (evento) => {
+
+    if(evento.key === "Escape" &&
+       modalMedidasBermuda &&
+       modalMedidasBermuda.classList.contains("ativo")){
+
+        modalMedidasBermuda.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
 /*=========================================
 REGATA
 =========================================*/
