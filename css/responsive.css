@@ -413,6 +413,29 @@ footer img{
 .carrossel-next{
     right:10px;
 }
+
+.btn-medidas{
+    width:100%;
+    max-width:300px;
+}
+
+.modal-medidas{
+    padding:10px;
+}
+
+.modal-medidas-conteudo{
+    width:95vw;
+
+    max-height:92vh;
+
+    padding:20px 12px;
+}
+
+.modal-medidas-conteudo h3{
+    font-size:20px;
+
+    padding-right:30px;
+}
 /*==========================================
 
 IPHONE SE / GALAXY A
