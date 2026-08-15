@@ -921,7 +921,7 @@ const galeriasBermuda = {
 
     "Bermuda Malhão Preta.jpeg": [
         "Bermuda Malhão Preta.jpeg",
-        "Bermuda Malhão Preta 2.png"
+        "bermudapreta.png"
     ],
 
     "Bermuda Malhão Branca.jpeg": [
