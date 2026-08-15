@@ -907,14 +907,99 @@ BERMUDA MALHÃO
 
 // FOTO
 
+/*=========================================
+BERMUDA MALHÃO - CARROSSEL
+=========================================*/
+
 const imagemBermuda = document.getElementById("imagem-bermuda");
 const selectBermuda = document.getElementById("corBermuda");
 
-if (imagemBermuda && selectBermuda) {
+const bermudaAnterior = document.getElementById("bermudaAnterior");
+const bermudaProxima = document.getElementById("bermudaProxima");
 
-    selectBermuda.addEventListener("change", function () {
+const imagensBermuda = [
+    "Bermuda Malhão Preta.jpeg",
+    "Bermuda Malhão Preta 2.png"
+];
+
+let indiceBermuda = 0;
+
+
+/* TROCAR IMAGEM */
+
+function mostrarImagemBermuda(indice){
+
+    if(!imagemBermuda) return;
+
+    imagemBermuda.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemBermuda.src = imagensBermuda[indice];
+
+        imagemBermuda.style.opacity = "1";
+
+    }, 150);
+}
+
+
+/* IMAGEM ANTERIOR */
+
+if(bermudaAnterior){
+
+    bermudaAnterior.addEventListener("click", () => {
+
+        indiceBermuda--;
+
+        if(indiceBermuda < 0){
+
+            indiceBermuda = imagensBermuda.length - 1;
+
+        }
+
+        mostrarImagemBermuda(indiceBermuda);
+
+    });
+
+}
+
+
+/* PRÓXIMA IMAGEM */
+
+if(bermudaProxima){
+
+    bermudaProxima.addEventListener("click", () => {
+
+        indiceBermuda++;
+
+        if(indiceBermuda >= imagensBermuda.length){
+
+            indiceBermuda = 0;
+
+        }
+
+        mostrarImagemBermuda(indiceBermuda);
+
+    });
+
+}
+
+
+/* TROCA DE COR */
+
+if(imagemBermuda && selectBermuda){
+
+    selectBermuda.addEventListener("change", function(){
 
         imagemBermuda.src = this.value;
+
+        /*
+        Quando uma nova cor for selecionada,
+        voltamos para a primeira imagem
+        daquela cor.
+        */
+
+        indiceBermuda = 0;
 
     });
 
