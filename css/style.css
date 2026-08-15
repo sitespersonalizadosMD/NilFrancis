@@ -876,6 +876,62 @@ PRODUTOS
 
 }
 
+/* =========================================
+   CARROSSEL - BERMUDA MALHÃO
+========================================= */
+
+.carrossel-bermuda{
+    position:relative;
+    overflow:hidden;
+}
+
+.carrossel-bermuda img{
+    width:100%;
+    max-width:380px;
+    height:auto;
+    transition:opacity .3s ease, transform .6s ease;
+}
+
+.carrossel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+    color:#68745F;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+    z-index:5;
+
+    transition:.3s ease;
+}
+
+.carrossel-btn:hover{
+    background:#68745F;
+    color:#fff;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.carrossel-prev{
+    left:15px;
+}
+
+.carrossel-next{
+    right:15px;
+}
+
 .produto-imagem img{
 
     width:100%;
