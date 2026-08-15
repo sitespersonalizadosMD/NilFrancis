@@ -2417,3 +2417,157 @@ ITEM DO CARRINHO
     transform:scale(1.15);
 
 }
+/* =========================================
+   BOTÃO DE MEDIDAS
+========================================= */
+
+.btn-medidas{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    margin:18px auto 0;
+
+    padding:12px 22px;
+
+    background:transparent;
+
+    border:1px solid #68745F;
+    border-radius:30px;
+
+    color:#68745F;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.btn-medidas:hover{
+    background:#68745F;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   MODAL DE MEDIDAS
+========================================= */
+
+.modal-medidas{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+.modal-medidas.ativo{
+    display:flex;
+}
+
+
+.modal-medidas-conteudo{
+    position:relative;
+
+    background:#fff;
+
+    width:min(90vw, 700px);
+    max-height:90vh;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+    overflow:auto;
+
+    animation:abrirMedidas .3s ease;
+}
+
+
+.modal-medidas-conteudo h3{
+    margin:0 0 20px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#2b2b2b;
+}
+
+
+.modal-medidas-conteudo img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    margin:auto;
+
+    border-radius:8px;
+}
+
+
+.fechar-medidas{
+    position:absolute;
+
+    top:12px;
+    right:12px;
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#68745F;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:2;
+
+    transition:.3s ease;
+}
+
+
+.fechar-medidas:hover{
+    transform:scale(1.08);
+}
+
+
+@keyframes abrirMedidas{
+
+    from{
+        opacity:0;
+        transform:scale(.92);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
