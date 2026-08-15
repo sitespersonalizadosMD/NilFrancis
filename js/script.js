@@ -917,12 +917,44 @@ const selectBermuda = document.getElementById("corBermuda");
 const bermudaAnterior = document.getElementById("bermudaAnterior");
 const bermudaProxima = document.getElementById("bermudaProxima");
 
-const imagensBermuda = [
-    "Bermuda Malhão Preta.jpeg",
-    "Bermuda Malhão Preta 2.png"
-];
+const galeriasBermuda = {
+
+    "Bermuda Malhão Preta.jpeg": [
+        "Bermuda Malhão Preta.jpeg",
+        "Bermuda Malhão Preta 2.png"
+    ],
+
+    "Bermuda Malhão Branca.jpeg": [
+        "Bermuda Malhão Branca.jpeg"
+    ],
+
+    "Bermuda Malhão Marrom.jpeg": [
+        "Bermuda Malhão Marrom.jpeg"
+    ]
+
+};
+
+let imagensBermuda = galeriasBermuda["Bermuda Malhão Preta.jpeg"];
 
 let indiceBermuda = 0;
+
+function atualizarSetasBermuda(){
+
+    if(!bermudaAnterior || !bermudaProxima) return;
+
+    if(imagensBermuda.length <= 1){
+
+        bermudaAnterior.style.display = "none";
+        bermudaProxima.style.display = "none";
+
+    } else {
+
+        bermudaAnterior.style.display = "flex";
+        bermudaProxima.style.display = "flex";
+
+    }
+
+}
 
 
 /* TROCAR IMAGEM */
@@ -991,19 +1023,27 @@ if(imagemBermuda && selectBermuda){
 
     selectBermuda.addEventListener("change", function(){
 
-        imagemBermuda.src = this.value;
+        /*
+        Pega a galeria correspondente à cor escolhida.
+        */
+
+        imagensBermuda = galeriasBermuda[this.value] || [this.value];
 
         /*
-        Quando uma nova cor for selecionada,
-        voltamos para a primeira imagem
-        daquela cor.
+        Sempre começa na primeira foto
+        da nova cor.
         */
 
         indiceBermuda = 0;
 
+        imagemBermuda.src = imagensBermuda[indiceBermuda];
+
+        atualizarSetasBermuda();
+
     });
 
 }
+atualizarSetasBermuda();
 
 /*=========================================
 BERMUDA MALHÃO - TAMANHO
