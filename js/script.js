@@ -1804,3 +1804,109 @@ if(botaoColecaoBermudaProxima){
     );
 
 }
+/*=========================================
+NOSSA COLEÇÃO - CARROSSEL SHORTS
+=========================================*/
+
+const imagemColecaoShorts =
+    document.getElementById("imagemColecaoShorts");
+
+const botaoColecaoShortsAnterior =
+    document.querySelector(".categoria-shorts-prev");
+
+const botaoColecaoShortsProxima =
+    document.querySelector(".categoria-shorts-next");
+
+
+const imagensColecaoShorts = [
+
+    "short3.png",
+
+    "short2.png",
+
+    "shortnascores.png",
+
+    "shorts5cores.png",
+
+    "vantagensdoshort.png"
+
+];
+
+
+let indiceColecaoShorts = 0;
+
+
+/* TROCAR IMAGEM */
+
+function mostrarImagemColecaoShorts(indice){
+
+    if(!imagemColecaoShorts) return;
+
+    imagemColecaoShorts.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemColecaoShorts.src =
+            imagensColecaoShorts[indice];
+
+        imagemColecaoShorts.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if(botaoColecaoShortsAnterior){
+
+    botaoColecaoShortsAnterior.addEventListener(
+        "click",
+        function(){
+
+            indiceColecaoShorts--;
+
+            if(indiceColecaoShorts < 0){
+
+                indiceColecaoShorts =
+                    imagensColecaoShorts.length - 1;
+
+            }
+
+            mostrarImagemColecaoShorts(
+                indiceColecaoShorts
+            );
+
+        }
+    );
+
+}
+
+
+/* PRÓXIMA FOTO */
+
+if(botaoColecaoShortsProxima){
+
+    botaoColecaoShortsProxima.addEventListener(
+        "click",
+        function(){
+
+            indiceColecaoShorts++;
+
+            if(
+                indiceColecaoShorts >=
+                imagensColecaoShorts.length
+            ){
+
+                indiceColecaoShorts = 0;
+
+            }
+
+            mostrarImagemColecaoShorts(
+                indiceColecaoShorts
+            );
+
+        }
+    );
+
+}
