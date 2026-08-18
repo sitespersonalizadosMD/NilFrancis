@@ -533,20 +533,149 @@ tamanhosShort.forEach(botao => {
 SHORT SARJA
 =========================================*/
 
-// FOTO
+// FOTO + CARROSSEL
 
 const imagemShort = document.getElementById("imagem-short");
 const selectShort = document.getElementById("corShort");
 
-if (imagemShort && selectShort) {
+const shortAnterior = document.getElementById("shortAnterior");
+const shortProxima = document.getElementById("shortProxima");
 
-    selectShort.addEventListener("change", function () {
+const galeriasShort = {
 
-        imagemShort.src = this.value;
+    "Short Sarja Preto.jpeg": [
+        "Short Sarja Preto.jpeg",
+        "shortpreto2.png"
+    ],
+
+    "Short Sarja Branco.jpeg": [
+        "Short Sarja Branco.jpeg"
+    ],
+
+    "Short Sarja Bege.jpeg": [
+        "Short Sarja Bege.jpeg"
+    ],
+
+    "Short Sarja Cinza.jpeg": [
+        "Short Sarja Cinza.jpeg"
+    ],
+
+    "Short Sarja Verde Militar.jpeg": [
+        "Short Sarja Verde Militar.jpeg"
+    ]
+
+};
+
+
+let imagensShort = galeriasShort[selectShort.value] || [selectShort.value];
+
+let indiceShort = 0;
+
+
+/* ATUALIZAR SETAS */
+
+function atualizarSetasShort(){
+
+    if(!shortAnterior || !shortProxima) return;
+
+    if(imagensShort.length <= 1){
+
+        shortAnterior.style.display = "none";
+        shortProxima.style.display = "none";
+
+    } else {
+
+        shortAnterior.style.display = "flex";
+        shortProxima.style.display = "flex";
+
+    }
+
+}
+
+
+/* MOSTRAR IMAGEM */
+
+function mostrarImagemShort(indice){
+
+    if(!imagemShort) return;
+
+    imagemShort.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemShort.src = imagensShort[indice];
+
+        imagemShort.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* IMAGEM ANTERIOR */
+
+if(shortAnterior){
+
+    shortAnterior.addEventListener("click", () => {
+
+        indiceShort--;
+
+        if(indiceShort < 0){
+
+            indiceShort = imagensShort.length - 1;
+
+        }
+
+        mostrarImagemShort(indiceShort);
 
     });
 
 }
+
+
+/* PRÓXIMA IMAGEM */
+
+if(shortProxima){
+
+    shortProxima.addEventListener("click", () => {
+
+        indiceShort++;
+
+        if(indiceShort >= imagensShort.length){
+
+            indiceShort = 0;
+
+        }
+
+        mostrarImagemShort(indiceShort);
+
+    });
+
+}
+
+
+/* TROCA DE COR */
+
+if(imagemShort && selectShort){
+
+    selectShort.addEventListener("change", function(){
+
+        imagensShort = galeriasShort[this.value] || [this.value];
+
+        indiceShort = 0;
+
+        imagemShort.src = imagensShort[indiceShort];
+
+        atualizarSetasShort();
+
+    });
+
+}
+
+
+/* INICIALIZA */
+
+atualizarSetasShort();
 
 /*=========================================
 ADICIONAR AO CARRINHO
