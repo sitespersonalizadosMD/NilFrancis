@@ -1719,7 +1719,9 @@ const imagensColecaoBermuda = [
 
     "fotoscoresbermuda.png",
 
-    "Fotomodelobermuda.png"
+    "Fotomodelobermuda.png",
+
+    "vantagensbermudamalhão.png"
 
 ];
 
