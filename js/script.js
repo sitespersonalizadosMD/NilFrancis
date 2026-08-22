@@ -493,8 +493,8 @@ const galeriasOversized = {
     "Azul escuro.jpeg": [
 
         "Azul escuro.jpeg",
-        "Azul escuro lateral.jpeg",
-        "Azul escuro costas.jpeg"
+        "azulescuro2.png",
+        "azulescuro3.png"
 
     ]
 
