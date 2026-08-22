@@ -2127,9 +2127,9 @@ if(botaoColecaoShortsProxima){
 ========================= */
 
 const imagensOversized = [
+    "7coresoversized.png"
     "vantagensoversized.png",
     "coresoversized.png",
-    "7coresoversized.png"
 ];
 
 let indiceOversized = 0;
