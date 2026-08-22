@@ -2244,7 +2244,7 @@ if(botaoColecaoShortsProxima){
 
 }
 /* =========================
-   CARROSSEL OVERSIZED
+   NOSSA COLEÇÃO - CARROSSEL OVERSIZED
 ========================= */
 
 const imagensColecaoOversized = [
