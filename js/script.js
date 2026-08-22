@@ -1637,6 +1637,87 @@ document.addEventListener("keydown", (evento) => {
     }
 
 });
+
+/*=========================================
+CAMISA OVERSIZED - MEDIDAS
+=========================================*/
+
+const abrirMedidasOversized =
+    document.getElementById("abrirMedidasOversized");
+
+const fecharMedidasOversized =
+    document.getElementById("fecharMedidasOversized");
+
+const modalMedidasOversized =
+    document.getElementById("modalMedidasOversized");
+
+
+/* ABRIR */
+
+if(abrirMedidasOversized && modalMedidasOversized){
+
+    abrirMedidasOversized.addEventListener("click", () => {
+
+        modalMedidasOversized.classList.add("ativo");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+}
+
+
+/* FECHAR NO X */
+
+if(fecharMedidasOversized && modalMedidasOversized){
+
+    fecharMedidasOversized.addEventListener("click", () => {
+
+        modalMedidasOversized.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+
+/* FECHAR CLICANDO FORA */
+
+if(modalMedidasOversized){
+
+    modalMedidasOversized.addEventListener("click", (evento) => {
+
+        if(evento.target === modalMedidasOversized){
+
+            modalMedidasOversized.classList.remove("ativo");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener("keydown", (evento) => {
+
+    if(
+        evento.key === "Escape" &&
+        modalMedidasOversized &&
+        modalMedidasOversized.classList.contains("ativo")
+    ){
+
+        modalMedidasOversized.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
 /*=========================================
 REGATA
 =========================================*/
