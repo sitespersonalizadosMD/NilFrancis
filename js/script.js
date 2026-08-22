@@ -490,12 +490,15 @@ const oversizedProxima = document.getElementById("oversizedProxima");
 
 const galeriasOversized = {
 
-    "Azul escuro.jpeg": [
+    "Preta.jpeg": [
+        "Preta.jpeg",
+        "oversizedpreta2.png"
+    ],
 
+    "Azul escuro.jpeg": [
         "Azul escuro.jpeg",
         "azulescuro2.png",
         "azulescuro3.png"
-
     ]
 
 };
