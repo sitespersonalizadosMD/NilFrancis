@@ -477,20 +477,141 @@ OVERSIZED
 
 // FOTO
 
+/*=========================================
+OVERSIZED - FOTO + CARROSSEL
+=========================================*/
+
 const imagemOversized = document.getElementById("imagem-oversized");
 const selectCor = document.getElementById("corOversized");
 
-if (imagemOversized && selectCor) {
+const oversizedAnterior = document.getElementById("oversizedAnterior");
+const oversizedProxima = document.getElementById("oversizedProxima");
 
-    selectCor.addEventListener("change", function () {
 
-        console.log(this.value);
+const galeriasOversized = {
 
-        imagemOversized.src = this.value;
+    "Azul escuro.jpeg": [
+
+        "Azul escuro.jpeg",
+        "Azul escuro lateral.jpeg",
+        "Azul escuro costas.jpeg"
+
+    ]
+
+};
+
+
+let imagensOversized =
+    galeriasOversized[selectCor.value] || [selectCor.value];
+
+let indiceOversized = 0;
+
+
+/* ATUALIZAR SETAS */
+
+function atualizarSetasOversized(){
+
+    if(!oversizedAnterior || !oversizedProxima) return;
+
+    if(imagensOversized.length <= 1){
+
+        oversizedAnterior.style.display = "none";
+        oversizedProxima.style.display = "none";
+
+    } else {
+
+        oversizedAnterior.style.display = "flex";
+        oversizedProxima.style.display = "flex";
+
+    }
+
+}
+
+
+/* MOSTRAR IMAGEM */
+
+function mostrarImagemOversized(indice){
+
+    if(!imagemOversized) return;
+
+    imagemOversized.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemOversized.src = imagensOversized[indice];
+
+        imagemOversized.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if(oversizedAnterior){
+
+    oversizedAnterior.addEventListener("click", () => {
+
+        indiceOversized--;
+
+        if(indiceOversized < 0){
+
+            indiceOversized = imagensOversized.length - 1;
+
+        }
+
+        mostrarImagemOversized(indiceOversized);
 
     });
 
 }
+
+
+/* PRÓXIMA FOTO */
+
+if(oversizedProxima){
+
+    oversizedProxima.addEventListener("click", () => {
+
+        indiceOversized++;
+
+        if(indiceOversized >= imagensOversized.length){
+
+            indiceOversized = 0;
+
+        }
+
+        mostrarImagemOversized(indiceOversized);
+
+    });
+
+}
+
+
+/* TROCA DE COR */
+
+if(imagemOversized && selectCor){
+
+    selectCor.addEventListener("change", function(){
+
+        imagensOversized =
+            galeriasOversized[this.value] || [this.value];
+
+        indiceOversized = 0;
+
+        imagemOversized.src = imagensOversized[indiceOversized];
+
+        atualizarSetasOversized();
+
+    });
+
+}
+
+
+/* INICIALIZA */
+
+atualizarSetasOversized();
 
 /*=========================================
 TRADICIONAL
