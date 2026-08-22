@@ -556,6 +556,10 @@ const galeriasShort = {
         "Short Sarja Bege.jpeg"
     ],
 
+    "begeclaro.png": [
+        "begeclaro.png"
+    ],
+
     "Short Sarja Cinza.jpeg": [
         "Short Sarja Cinza.jpeg"
     ],
