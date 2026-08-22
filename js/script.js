@@ -501,6 +501,13 @@ const galeriasOversized = {
         "azulescuro3.png"
     ]
 
+     "Verde Militar.jpeg": [
+
+        "Verde Militar.jpeg",
+        "verdemilitar2.png"
+
+    ]
+
 };
 
 
