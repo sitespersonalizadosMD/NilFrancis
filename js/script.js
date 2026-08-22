@@ -496,15 +496,17 @@ const galeriasOversized = {
     ],
 
     "Azul escuro.jpeg": [
-    "Azul escuro.jpeg",
-    "azulescuro2.png",
-    "azulescuro3.png"
-],
+        "Azul escuro.jpeg",
+        "azulescuro2.png",
+        "azulescuro3.png"
+    ],
 
-"Verde Militar.jpeg": [
-    "Verde Militar.jpeg",
-    "verdemilitar2.png"
-]
+    "Verde Militar.jpeg": [
+        "Verde Militar.jpeg",
+        "verdemilitar2.png"
+    ]
+
+};
 
 
 let imagensOversized =
