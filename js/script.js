@@ -2247,13 +2247,13 @@ if(botaoColecaoShortsProxima){
    CARROSSEL OVERSIZED
 ========================= */
 
-const imagensOversized = [
-    "7coresoversized.png"
+const imagensColecaoOversized = [
+    "7coresoversized.png",
     "vantagensoversized.png",
-    "coresoversized.png",
+    "coresoversized.png"
 ];
 
-let indiceOversized = 0;
+let indiceColecaoOversized = 0;
 
 const imagemColecaoOversized =
     document.getElementById("imagemColecaoOversized");
@@ -2265,14 +2265,16 @@ const btnOversizedProxima =
     document.querySelector(".categoria-oversized-next");
 
 
-function atualizarImagemOversized() {
+function atualizarImagemColecaoOversized() {
+
+    if (!imagemColecaoOversized) return;
 
     imagemColecaoOversized.style.opacity = "0";
 
     setTimeout(() => {
 
         imagemColecaoOversized.src =
-            imagensOversized[indiceOversized];
+            imagensColecaoOversized[indiceColecaoOversized];
 
         imagemColecaoOversized.style.opacity = "1";
 
@@ -2281,32 +2283,47 @@ function atualizarImagemOversized() {
 }
 
 
-btnOversizedProxima.addEventListener("click", () => {
+/* PRÓXIMA FOTO */
 
-    indiceOversized++;
+if (btnOversizedProxima) {
 
-    if (indiceOversized >= imagensOversized.length) {
+    btnOversizedProxima.addEventListener("click", () => {
 
-        indiceOversized = 0;
+        indiceColecaoOversized++;
 
-    }
+        if (
+            indiceColecaoOversized >=
+            imagensColecaoOversized.length
+        ) {
 
-    atualizarImagemOversized();
+            indiceColecaoOversized = 0;
 
-});
+        }
+
+        atualizarImagemColecaoOversized();
+
+    });
+
+}
 
 
-btnOversizedAnterior.addEventListener("click", () => {
+/* FOTO ANTERIOR */
 
-    indiceOversized--;
+if (btnOversizedAnterior) {
 
-    if (indiceOversized < 0) {
+    btnOversizedAnterior.addEventListener("click", () => {
 
-        indiceOversized =
-            imagensOversized.length - 1;
+        indiceColecaoOversized--;
 
-    }
+        if (indiceColecaoOversized < 0) {
 
-    atualizarImagemOversized();
+            indiceColecaoOversized =
+                imagensColecaoOversized.length - 1;
 
-});
+        }
+
+        atualizarImagemColecaoOversized();
+
+    });
+
+}
