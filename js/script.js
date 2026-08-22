@@ -1429,6 +1429,85 @@ document.addEventListener("keydown", (evento) => {
     }
 
 });
+
+/*=========================================
+SHORT SARJA - MEDIDAS
+=========================================*/
+
+const abrirMedidasShort =
+    document.getElementById("abrirMedidasShort");
+
+const fecharMedidasShort =
+    document.getElementById("fecharMedidasShort");
+
+const modalMedidasShort =
+    document.getElementById("modalMedidasShort");
+
+
+/* ABRIR */
+
+if(abrirMedidasShort && modalMedidasShort){
+
+    abrirMedidasShort.addEventListener("click", () => {
+
+        modalMedidasShort.classList.add("ativo");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+}
+
+
+/* FECHAR NO X */
+
+if(fecharMedidasShort && modalMedidasShort){
+
+    fecharMedidasShort.addEventListener("click", () => {
+
+        modalMedidasShort.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+
+/* FECHAR CLICANDO FORA */
+
+if(modalMedidasShort){
+
+    modalMedidasShort.addEventListener("click", (evento) => {
+
+        if(evento.target === modalMedidasShort){
+
+            modalMedidasShort.classList.remove("ativo");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener("keydown", (evento) => {
+
+    if(evento.key === "Escape" &&
+       modalMedidasShort &&
+       modalMedidasShort.classList.contains("ativo")){
+
+        modalMedidasShort.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
 /*=========================================
 REGATA
 =========================================*/
