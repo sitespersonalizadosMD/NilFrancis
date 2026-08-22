@@ -2122,3 +2122,70 @@ if(botaoColecaoShortsProxima){
     );
 
 }
+/* =========================
+   CARROSSEL OVERSIZED
+========================= */
+
+const imagensOversized = [
+    "vantagensoversized.png",
+    "coresoversized.png",
+    "7coresoversized.png"
+];
+
+let indiceOversized = 0;
+
+const imagemColecaoOversized =
+    document.getElementById("imagemColecaoOversized");
+
+const btnOversizedAnterior =
+    document.querySelector(".categoria-oversized-prev");
+
+const btnOversizedProxima =
+    document.querySelector(".categoria-oversized-next");
+
+
+function atualizarImagemOversized() {
+
+    imagemColecaoOversized.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemColecaoOversized.src =
+            imagensOversized[indiceOversized];
+
+        imagemColecaoOversized.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+btnOversizedProxima.addEventListener("click", () => {
+
+    indiceOversized++;
+
+    if (indiceOversized >= imagensOversized.length) {
+
+        indiceOversized = 0;
+
+    }
+
+    atualizarImagemOversized();
+
+});
+
+
+btnOversizedAnterior.addEventListener("click", () => {
+
+    indiceOversized--;
+
+    if (indiceOversized < 0) {
+
+        indiceOversized =
+            imagensOversized.length - 1;
+
+    }
+
+    atualizarImagemOversized();
+
+});
