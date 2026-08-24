@@ -2416,3 +2416,87 @@ if (btnOversizedAnterior) {
     });
 
 }
+/* =========================
+   NOSSA COLEÇÃO - CARROSSEL TRADICIONAL
+========================= */
+
+const imagensColecaoTradicional = [
+    "7corestradicional.png",
+    "vantagenscamisatradicional.png",
+    "todascorestradicional.png"
+];
+
+let indiceColecaoTradicional = 0;
+
+const imagemColecaoTradicional =
+    document.getElementById("imagemColecaoTradicional");
+
+const btnTradicionalAnterior =
+    document.querySelector(".categoria-tradicional-prev");
+
+const btnTradicionalProxima =
+    document.querySelector(".categoria-tradicional-next");
+
+
+function atualizarImagemColecaoTradicional() {
+
+    if (!imagemColecaoTradicional) return;
+
+    imagemColecaoTradicional.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemColecaoTradicional.src =
+            imagensColecaoTradicional[
+                indiceColecaoTradicional
+            ];
+
+        imagemColecaoTradicional.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* PRÓXIMA FOTO */
+
+if (btnTradicionalProxima) {
+
+    btnTradicionalProxima.addEventListener("click", () => {
+
+        indiceColecaoTradicional++;
+
+        if (
+            indiceColecaoTradicional >=
+            imagensColecaoTradicional.length
+        ) {
+            indiceColecaoTradicional = 0;
+        }
+
+        atualizarImagemColecaoTradicional();
+
+    });
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if (btnTradicionalAnterior) {
+
+    btnTradicionalAnterior.addEventListener("click", () => {
+
+        indiceColecaoTradicional--;
+
+        if (indiceColecaoTradicional < 0) {
+
+            indiceColecaoTradicional =
+                imagensColecaoTradicional.length - 1;
+
+        }
+
+        atualizarImagemColecaoTradicional();
+
+    });
+
+}
