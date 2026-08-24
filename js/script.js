@@ -2500,3 +2500,47 @@ if (btnTradicionalAnterior) {
     });
 
 }
+const imagensTradicionalPreto = [
+    "Camiseta Tradicional Lisa Preta.jpeg",
+    "preto2.png"
+];
+
+let indiceTradicionalPreto = 0;
+
+const imagemTradicional = document.getElementById("imagem-tradicional");
+const tradicionalAnterior = document.getElementById("tradicionalAnterior");
+const tradicionalProxima = document.getElementById("tradicionalProxima");
+
+function atualizarImagemTradicional() {
+
+    imagemTradicional.src =
+        imagensTradicionalPreto[indiceTradicionalPreto];
+
+}
+
+tradicionalProxima.addEventListener("click", () => {
+
+    indiceTradicionalPreto++;
+
+    if (
+        indiceTradicionalPreto >= imagensTradicionalPreto.length
+    ) {
+        indiceTradicionalPreto = 0;
+    }
+
+    atualizarImagemTradicional();
+
+});
+
+tradicionalAnterior.addEventListener("click", () => {
+
+    indiceTradicionalPreto--;
+
+    if (indiceTradicionalPreto < 0) {
+        indiceTradicionalPreto =
+            imagensTradicionalPreto.length - 1;
+    }
+
+    atualizarImagemTradicional();
+
+});
