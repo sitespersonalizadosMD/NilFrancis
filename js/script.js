@@ -2507,7 +2507,6 @@ const imagensTradicionalPreto = [
 
 let indiceTradicionalPreto = 0;
 
-const imagemTradicional = document.getElementById("imagem-tradicional");
 const tradicionalAnterior = document.getElementById("tradicionalAnterior");
 const tradicionalProxima = document.getElementById("tradicionalProxima");
 
