@@ -2661,3 +2661,12 @@ ITEM DO CARRINHO
 .categoria-oversized-next{
     right:12px;
 }
+/* SETAS - TRADICIONAL */
+
+.categoria-tradicional-prev{
+    left:12px;
+}
+
+.categoria-tradicional-next{
+    right:12px;
+}
