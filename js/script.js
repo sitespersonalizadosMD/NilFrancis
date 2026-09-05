@@ -2502,7 +2502,7 @@ if (btnTradicionalAnterior) {
 }
 const imagensTradicionalPreto = [
     "Camiseta Tradicional Lisa Preta.jpeg",
-    "preto2.png"
+    "tradicionalpreta2.png"
 ];
 
 let indiceTradicionalPreto = 0;
