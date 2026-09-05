@@ -2500,55 +2500,143 @@ if (btnTradicionalAnterior) {
     });
 
 }
-const imagensTradicionalPreto = [
-    "Camiseta Tradicional Lisa Preta.jpeg",
-    "tradicionalpreta2.png"
-];
+/*=========================================
+TRADICIONAL - CARROSSEL
+=========================================*/
 
-let indiceTradicionalPreto = 0;
+const imagemTradicional =
+    document.getElementById("imagem-tradicional");
 
-const tradicionalAnterior = document.getElementById("tradicionalAnterior");
-const tradicionalProxima = document.getElementById("tradicionalProxima");
-const corTradicional = document.getElementById("corTradicional");
+const tradicionalAnterior =
+    document.getElementById("tradicionalAnterior");
 
-function atualizarImagemTradicional() {
+const tradicionalProxima =
+    document.getElementById("tradicionalProxima");
+
+const corTradicional =
+    document.getElementById("corTradicional");
+
+
+const galeriasTradicional = {
+
+    "Camiseta Tradicional Lisa Preta.jpeg": [
+        "Camiseta Tradicional Lisa Preta.jpeg",
+        "tradicionalpreta2.png"
+    ],
+
+    "Camiseta Tradicional Lisa Branca.jpeg": [
+        "Camiseta Tradicional Lisa Branca.jpeg",
+        "creme2.png"
+    ]
+
+};
+
+
+let indiceTradicional = 0;
+
+
+function atualizarTradicional() {
+
+    const corSelecionada = corTradicional.value;
+
+    const galeria =
+        galeriasTradicional[corSelecionada];
+
+    if (!galeria) {
+
+        indiceTradicional = 0;
+
+        imagemTradicional.src = corSelecionada;
+
+        tradicionalAnterior.style.display = "none";
+        tradicionalProxima.style.display = "none";
+
+        return;
+    }
+
+
+    if (indiceTradicional >= galeria.length) {
+        indiceTradicional = 0;
+    }
+
 
     imagemTradicional.src =
-        imagensTradicionalPreto[indiceTradicionalPreto];
+        galeria[indiceTradicional];
+
+
+    if (galeria.length > 1) {
+
+        tradicionalAnterior.style.display = "flex";
+        tradicionalProxima.style.display = "flex";
+
+    } else {
+
+        tradicionalAnterior.style.display = "none";
+        tradicionalProxima.style.display = "none";
+
+    }
 
 }
+
+
+/* PRÓXIMA FOTO */
 
 tradicionalProxima.addEventListener("click", () => {
 
-    indiceTradicionalPreto++;
+    const galeria =
+        galeriasTradicional[corTradicional.value];
 
-    if (
-        indiceTradicionalPreto >= imagensTradicionalPreto.length
-    ) {
-        indiceTradicionalPreto = 0;
+    if (!galeria || galeria.length <= 1) return;
+
+
+    indiceTradicional++;
+
+    if (indiceTradicional >= galeria.length) {
+        indiceTradicional = 0;
     }
 
-    atualizarImagemTradicional();
+
+    atualizarTradicional();
 
 });
 
-function controlarSetasTradicional() {
 
-    if (corTradicional.value === "Camiseta Tradicional Lisa Preta.jpeg") {
-        tradicionalAnterior.style.display = "flex";
-        tradicionalProxima.style.display = "flex";
-    } else {
-        tradicionalAnterior.style.display = "none";
-        tradicionalProxima.style.display = "none";
+/* FOTO ANTERIOR */
+
+tradicionalAnterior.addEventListener("click", () => {
+
+    const galeria =
+        galeriasTradicional[corTradicional.value];
+
+    if (!galeria || galeria.length <= 1) return;
+
+
+    indiceTradicional--;
+
+    if (indiceTradicional < 0) {
+        indiceTradicional = galeria.length - 1;
     }
 
-}
+
+    atualizarTradicional();
+
+});
+
+
+/* TROCA DE COR */
 
 corTradicional.addEventListener("change", () => {
 
-    indiceTradicionalPreto = 0;
+    indiceTradicional = 0;
 
-    controlarSetasTradicional();
+    atualizarTradicional();
+
+});
+
+
+/* INICIALIZA */
+
+atualizarTradicional();
 
 });
 
