@@ -622,25 +622,6 @@ if(imagemOversized && selectCor){
 atualizarSetasOversized();
 
 /*=========================================
-TRADICIONAL
-=========================================*/
-
-// FOTO
-
-const imagemTradicional = document.getElementById("imagem-tradicional");
-const selectTradicional = document.getElementById("corTradicional");
-
-if (imagemTradicional && selectTradicional) {
-
-    selectTradicional.addEventListener("change", function () {
-
-        imagemTradicional.src = this.value;
-
-    });
-
-}
-
-/*=========================================
 SHORT SARJA - TAMANHO
 =========================================*/
 
@@ -2637,20 +2618,5 @@ corTradicional.addEventListener("change", () => {
 /* INICIALIZA */
 
 atualizarTradicional();
-
-});
-
-controlarSetasTradicional();
-
-tradicionalAnterior.addEventListener("click", () => {
-
-    indiceTradicionalPreto--;
-
-    if (indiceTradicionalPreto < 0) {
-        indiceTradicionalPreto =
-            imagensTradicionalPreto.length - 1;
-    }
-
-    atualizarImagemTradicional();
 
 });
