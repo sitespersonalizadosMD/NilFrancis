@@ -2670,6 +2670,16 @@ ITEM DO CARRINHO
 .categoria-tradicional-next{
     right:12px;
 }
+
+/* SETAS - REGATA */
+
+.categoria-regata-prev{
+    left:12px;
+}
+
+.categoria-regata-next{
+    right:12px;
+}
 .aviso-frete {
     background: #f8f5ef;
     border-left: 4px solid #6f7b6d;
