@@ -2515,6 +2515,11 @@ const galeriasTradicional = {
         "azulmarinho2.png"
     ]
 
+    "Camiseta Tradicional Lisa Verde Escuro.jpeg": [
+    "Camiseta Tradicional Lisa Verde Escuro.jpeg",
+    "verdeescuro2.png"
+]
+
 };
 
 
