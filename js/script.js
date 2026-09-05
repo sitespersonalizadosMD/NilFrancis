@@ -1823,6 +1823,10 @@ const galeriasRegata = {
         "Regata Lisa Verde Bandeira.jpeg"
     ],
 
+    "regataverdeoliva.png": [
+    "regataverdeoliva.png"
+],
+
    "Regata Lisa Verde Militar.jpeg": [
     "Regata Lisa Verde Militar.jpeg",
     "regataverdemilitar.png"
