@@ -1781,23 +1781,179 @@ document.addEventListener("keydown", (evento) => {
 
 });
 /*=========================================
-REGATA
+REGATA - CARROSSEL
 =========================================*/
 
-// FOTO
+const imagemRegata =
+    document.getElementById("imagem-regata");
 
-const imagemRegata = document.getElementById("imagem-regata");
-const selectRegata = document.getElementById("corRegata");
+const selectRegata =
+    document.getElementById("corRegata");
+
+const regataAnterior =
+    document.getElementById("regataAnterior");
+
+const regataProxima =
+    document.getElementById("regataProxima");
+
+
+const galeriasRegata = {
+
+    "Regata Lisa Azul.jpeg": [
+        "Regata Lisa Azul.jpeg"
+    ],
+
+    "Regata Lisa Amarela.jpeg": [
+        "Regata Lisa Amarela.jpeg"
+    ],
+
+    "Regata Lisa Cinza.jpeg": [
+        "Regata Lisa Cinza.jpeg"
+    ],
+
+    "Regata Lisa Laranja.jpeg": [
+        "Regata Lisa Laranja.jpeg"
+    ],
+
+    "Regata Lisa Verde Bandeira.jpeg": [
+        "Regata Lisa Verde Bandeira.jpeg"
+    ],
+
+    "Regata Lisa Verde Militar.jpeg": [
+        "Regata Lisa Verde Militar.jpeg"
+    ],
+
+    "Regata Lisa Vinho.jpeg": [
+        "Regata Lisa Vinho.jpeg"
+    ],
+
+    "regatamarrom1.png": [
+        "regatamarrom1.png",
+        "regatamarrom2.png"
+    ]
+
+};
+
+
+let imagensRegata =
+    galeriasRegata[selectRegata.value] ||
+    [selectRegata.value];
+
+let indiceRegata = 0;
+
+
+/* ATUALIZAR SETAS */
+
+function atualizarSetasRegata() {
+
+    if (!regataAnterior || !regataProxima) return;
+
+    if (imagensRegata.length <= 1) {
+
+        regataAnterior.style.display = "none";
+        regataProxima.style.display = "none";
+
+    } else {
+
+        regataAnterior.style.display = "flex";
+        regataProxima.style.display = "flex";
+
+    }
+
+}
+
+
+/* MOSTRAR IMAGEM */
+
+function mostrarImagemRegata(indice) {
+
+    if (!imagemRegata) return;
+
+    imagemRegata.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemRegata.src =
+            imagensRegata[indice];
+
+        imagemRegata.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if (regataAnterior) {
+
+    regataAnterior.addEventListener("click", () => {
+
+        indiceRegata--;
+
+        if (indiceRegata < 0) {
+
+            indiceRegata =
+                imagensRegata.length - 1;
+
+        }
+
+        mostrarImagemRegata(indiceRegata);
+
+    });
+
+}
+
+
+/* PRÓXIMA FOTO */
+
+if (regataProxima) {
+
+    regataProxima.addEventListener("click", () => {
+
+        indiceRegata++;
+
+        if (
+            indiceRegata >=
+            imagensRegata.length
+        ) {
+
+            indiceRegata = 0;
+
+        }
+
+        mostrarImagemRegata(indiceRegata);
+
+    });
+
+}
+
+
+/* TROCA DE COR */
 
 if (imagemRegata && selectRegata) {
 
     selectRegata.addEventListener("change", function () {
 
-        imagemRegata.src = this.value;
+        imagensRegata =
+            galeriasRegata[this.value] ||
+            [this.value];
+
+        indiceRegata = 0;
+
+        imagemRegata.src =
+            imagensRegata[indiceRegata];
+
+        atualizarSetasRegata();
 
     });
 
 }
+
+
+/* INICIALIZA */
+
+atualizarSetasRegata();
 /*=========================================
 REGATA - TAMANHO
 =========================================*/
