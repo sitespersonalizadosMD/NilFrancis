@@ -2131,6 +2131,87 @@ const tamanho = tamanhoSelecionado.innerText;
     });
 
 }
+
+/*=========================================
+REGATA - MEDIDAS
+=========================================*/
+
+const abrirMedidasRegata =
+    document.getElementById("abrirMedidasRegata");
+
+const fecharMedidasRegata =
+    document.getElementById("fecharMedidasRegata");
+
+const modalMedidasRegata =
+    document.getElementById("modalMedidasRegata");
+
+
+/* ABRIR */
+
+if(abrirMedidasRegata && modalMedidasRegata){
+
+    abrirMedidasRegata.addEventListener("click", () => {
+
+        modalMedidasRegata.classList.add("ativo");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+}
+
+
+/* FECHAR NO X */
+
+if(fecharMedidasRegata && modalMedidasRegata){
+
+    fecharMedidasRegata.addEventListener("click", () => {
+
+        modalMedidasRegata.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    });
+
+}
+
+
+/* FECHAR CLICANDO FORA */
+
+if(modalMedidasRegata){
+
+    modalMedidasRegata.addEventListener("click", (evento) => {
+
+        if(evento.target === modalMedidasRegata){
+
+            modalMedidasRegata.classList.remove("ativo");
+
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener("keydown", (evento) => {
+
+    if(
+        evento.key === "Escape" &&
+        modalMedidasRegata &&
+        modalMedidasRegata.classList.contains("ativo")
+    ){
+
+        modalMedidasRegata.classList.remove("ativo");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
 /*=========================================
 CHECKOUT
 =========================================*/
