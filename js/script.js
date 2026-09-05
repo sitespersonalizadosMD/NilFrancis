@@ -2579,8 +2579,6 @@ tradicionalProxima.addEventListener("click", () => {
 
     atualizarTradicional();
 
-});
-
 
 /* FOTO ANTERIOR */
 
