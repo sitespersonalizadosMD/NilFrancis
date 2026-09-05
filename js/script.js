@@ -2579,6 +2579,8 @@ tradicionalProxima.addEventListener("click", () => {
 
     atualizarTradicional();
 
+    });
+
 
 /* FOTO ANTERIOR */
 
@@ -2616,5 +2618,3 @@ corTradicional.addEventListener("change", () => {
 /* INICIALIZA */
 
 atualizarTradicional();
-
-});
