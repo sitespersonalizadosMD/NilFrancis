@@ -2509,6 +2509,7 @@ let indiceTradicionalPreto = 0;
 
 const tradicionalAnterior = document.getElementById("tradicionalAnterior");
 const tradicionalProxima = document.getElementById("tradicionalProxima");
+const corTradicional = document.getElementById("corTradicional");
 
 function atualizarImagemTradicional() {
 
@@ -2530,6 +2531,28 @@ tradicionalProxima.addEventListener("click", () => {
     atualizarImagemTradicional();
 
 });
+
+function controlarSetasTradicional() {
+
+    if (corTradicional.value === "Camiseta Tradicional Lisa Preta.jpeg") {
+        tradicionalAnterior.style.display = "flex";
+        tradicionalProxima.style.display = "flex";
+    } else {
+        tradicionalAnterior.style.display = "none";
+        tradicionalProxima.style.display = "none";
+    }
+
+}
+
+corTradicional.addEventListener("change", () => {
+
+    indiceTradicionalPreto = 0;
+
+    controlarSetasTradicional();
+
+});
+
+controlarSetasTradicional();
 
 tradicionalAnterior.addEventListener("click", () => {
 
