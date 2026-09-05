@@ -1799,6 +1799,10 @@ const regataProxima =
 
 const galeriasRegata = {
 
+    "pretaregata.png": [
+    "pretaregata.png"
+],
+
     "Regata Lisa Azul.jpeg": [
         "Regata Lisa Azul.jpeg"
     ],
