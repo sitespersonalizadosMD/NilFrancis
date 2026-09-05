@@ -2478,6 +2478,91 @@ if (btnOversizedAnterior) {
     });
 
 }
+
+        /* =========================
+   NOSSA COLEÇÃO - CARROSSEL REGATA
+========================= */
+
+const imagensColecaoRegata = [
+    "6coresregata.png",
+    "vantagensregata.png",
+    "coresregata.png"
+];
+
+let indiceColecaoRegata = 0;
+
+const imagemColecaoRegata =
+    document.getElementById("imagemColecaoRegata");
+
+const btnRegataAnterior =
+    document.querySelector(".categoria-regata-prev");
+
+const btnRegataProxima =
+    document.querySelector(".categoria-regata-next");
+
+
+function atualizarImagemColecaoRegata() {
+
+    if (!imagemColecaoRegata) return;
+
+    imagemColecaoRegata.style.opacity = "0";
+
+    setTimeout(() => {
+
+        imagemColecaoRegata.src =
+            imagensColecaoRegata[indiceColecaoRegata];
+
+        imagemColecaoRegata.style.opacity = "1";
+
+    }, 150);
+
+}
+
+
+/* PRÓXIMA FOTO */
+
+if (btnRegataProxima) {
+
+    btnRegataProxima.addEventListener("click", () => {
+
+        indiceColecaoRegata++;
+
+        if (
+            indiceColecaoRegata >=
+            imagensColecaoRegata.length
+        ) {
+
+            indiceColecaoRegata = 0;
+
+        }
+
+        atualizarImagemColecaoRegata();
+
+    });
+
+}
+
+
+/* FOTO ANTERIOR */
+
+if (btnRegataAnterior) {
+
+    btnRegataAnterior.addEventListener("click", () => {
+
+        indiceColecaoRegata--;
+
+        if (indiceColecaoRegata < 0) {
+
+            indiceColecaoRegata =
+                imagensColecaoRegata.length - 1;
+
+        }
+
+        atualizarImagemColecaoRegata();
+
+    });
+
+}
 /* =========================
    NOSSA COLEÇÃO - CARROSSEL TRADICIONAL
 ========================= */
